@@ -23,6 +23,13 @@ return require('packer').startup(function(use)
 
 	use('tpope/vim-fugitive')
 
+    use('github/copilot.vim')
+
+    use('wellle/context.vim')
+
+    -- no longer maintained, maybe remove?
+    use('p00f/nvim-ts-rainbow')
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
@@ -42,5 +49,6 @@ return require('packer').startup(function(use)
 		{'hrsh7th/cmp-nvim-lsp'}, -- Required
 		{'L3MON4D3/LuaSnip'},     -- Required
 	}
+
 }
 end)
