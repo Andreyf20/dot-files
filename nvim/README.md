@@ -1,6 +1,6 @@
 Location for this file -> /home/USER/.config/nvim
 
-Make sure to install gcc g++ needed for some plugins
+Make sure to install gcc g++ ripgrep needed for some plugins
 
 Linters:
 
