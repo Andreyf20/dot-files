@@ -30,6 +30,15 @@ return require('packer').startup(function(use)
     -- no longer maintained, maybe remove?
     use('p00f/nvim-ts-rainbow')
 
+    use('jose-elias-alvarez/null-ls.nvim')
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
