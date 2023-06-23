@@ -1,2 +1,2 @@
 # Ignore the nvim plugins cache dir
-./nvim/plugin/*
+nvim/plugin/
