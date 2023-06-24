@@ -11,5 +11,5 @@ Linters:
 
 - npm i -g eslint_d // for javascript, typescript
 - npm i -g @fsouza/prettierd // for javascript, typescript ??
-- pip i --upgrade autopep8 // for python might need to install pip first
+- pip install --upgrade autopep8 // for python might need to install pip first
 - dotnet tool install csharpier -g // for csharp
