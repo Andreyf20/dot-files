@@ -34,4 +34,13 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd.colorscheme("tokyonight-night")
+function colorTerminal(color)
+  color = color or "tokyonight-night"
+  vim.cmd.colorscheme(color)
+
+  -- Set transparent background, disable this if not necessary
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
+colorTerminal()
