@@ -9,8 +9,7 @@ LSP:
 
 Linters:
 
-- npm install -g eslint_d // for javascript, typescript
-- npm install -g @fsouza/prettierd // for javascript, typescript ??
-- pip install --upgrade autopep8 // for python might need to install pip first
+- npm i -g eslint_d // for javascript, typescript
+- npm i -g @fsouza/prettierd // for javascript, typescript ??
+- pip i --upgrade autopep8 // for python might need to install pip first
 - dotnet tool install csharpier -g // for csharp
-- npm install -g vscode-langservers-extracted // for css
