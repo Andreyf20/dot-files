@@ -8,6 +8,7 @@ null_ls.setup({
         null_ls.builtins.formatting.rustfmt,
         null_ls.builtins.formatting.autopep8,
         null_ls.builtins.formatting.csharpier,
+        null_ls.builtins.formatting.mix, -- Elixir
     },
 
     -- Might wanna remove the auto format on save if it starts giving me errors

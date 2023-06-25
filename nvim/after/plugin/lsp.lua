@@ -8,6 +8,7 @@ lsp.ensure_installed({
   'eslint',
   'cssls',
   'pyright',
+  'elixirls',
 })
 
 -- Fix Undefined global 'vim'
@@ -63,4 +64,18 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
+})
+
+-- Annoying elixirls config, also probably need another separate formatter for phoenix
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('lspconfig').elixirls.setup({
+  cmd = { "/home/andrey/.elixirls/scripts/language_server.sh" },
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  elixirLS = {
+    dialyzerEnabled = false,
+    fetchDeps = false,
+  };
 })

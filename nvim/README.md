@@ -13,3 +13,15 @@ Linters:
 - npm i -g @fsouza/prettierd // for javascript, typescript ??
 - pip install --upgrade autopep8 // for python might need to install pip first
 - dotnet tool install csharpier -g // for csharp
+- Read ElixirLs section
+
+When adding new language need to change:
+
+- null.lua // Auto formatting, formatting on save
+- lsp.lua // Language server
+- treesitter.lua // Syntax highlighting
+
+ElixirLs
+
+- Download latest version [elixirls](https://github.com/elixir-lsp/elixir-ls)
+- ./language-server.sh // Pray, it's been bugged since at least May 2023... not working for me
