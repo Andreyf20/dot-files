@@ -1,6 +1,6 @@
 Location for this file -> /home/USER/.config/nvim
 
-Make sure to install gcc g++ ripgrep which are needed for some plugins
+Make sure to install gcc g++ ripgrep unzip which are needed for some plugins
 
 LSP:
 
@@ -21,7 +21,14 @@ When adding new language need to change:
 - lsp.lua // Language server
 - treesitter.lua // Syntax highlighting
 
-ElixirLs
+ElixirLs // MAKE SURE TO INSTALL THE EXACT VERSIONS (These versions are the only ones that have worked for me so far every other attempt has been just errors everywhere)
 
-- Download latest version [elixirls](https://github.com/elixir-lsp/elixir-ls)
-- ./language-server.sh // Pray, it's been bugged since at least May 2023... not working for me
+- install elixir and erlang with [asdf](https://asdf-vm.com/guide/getting-started.html)
+- asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
+- asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+- sudo apt install automake autoconf libncurses5-dev
+- asdf install erlang 25.3.2.2 
+- asdf install elixir 1.14.4-otp-25
+- asdf global elixir 1.14.4-otp-25
+- asdf global erlang 25.3.2.2
+- mix local.hex
