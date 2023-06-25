@@ -32,3 +32,5 @@ ElixirLs // MAKE SURE TO INSTALL THE EXACT VERSIONS (These versions are the only
 - asdf global elixir 1.14.4-otp-25
 - asdf global erlang 25.3.2.2
 - mix local.hex
+- download the [elixirls](https://github.com/elixir-lsp/elixir-ls/releases) // Version 0.15.0 is the one that worked for the elixir and erlang versions installed
+- unzip elixir-ls-v0.15.0.zip -d .elixirls // I usually do ~/.elixirls which won't require to change the lsp.lua file
