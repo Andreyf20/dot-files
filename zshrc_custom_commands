@@ -1,5 +1,0 @@
-alias cdg="~/Documents" # Git dir change accordingly
-# Refresh git dir and pull
-alias grefresh="git fetch --prune origin && git pull --ff"
-# copy nvim settings from git local master to the config/
-alias cpnvimconfig="cp -r ~/.config/nvim ~/Documents/dot-files/ && cd ~/Documents/dot-files/"
