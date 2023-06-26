@@ -1,4 +1,4 @@
-Location for this file -> /home/USER/.config/nvim
+Location for this dir should be -> /home/USER/.config/nvim
 
 Make sure to install gcc g++ ripgrep unzip which are needed for some plugins
 
@@ -24,13 +24,13 @@ When adding new language need to change:
 ElixirLs // MAKE SURE TO INSTALL THE EXACT VERSIONS (These versions are the only ones that have worked for me so far every other attempt has been just errors everywhere)
 
 - install elixir and erlang with [asdf](https://asdf-vm.com/guide/getting-started.html)
-- asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
-- asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-- sudo apt install automake autoconf libncurses5-dev
+- asdf plugin add [erlang](https://github.com/asdf-vm/asdf-erlang.git)
+- asdf plugin-add [elixir](https://github.com/asdf-vm/asdf-elixir.git)
+- sudo apt install automake autoconf libncurses5-dev // called ncurses in Arch
 - asdf install erlang 25.3.2.2 
+- asdf global erlang 25.3.2.2
 - asdf install elixir 1.14.4-otp-25
 - asdf global elixir 1.14.4-otp-25
-- asdf global erlang 25.3.2.2
 - mix local.hex
-- download the [elixirls](https://github.com/elixir-lsp/elixir-ls/releases) // Version 0.15.0 is the one that worked for the elixir and erlang versions installed
-- unzip elixir-ls-v0.15.0.zip -d .elixirls // I usually do ~/.elixirls which won't require to change the lsp.lua file
+- download [elixirls](https://github.com/elixir-lsp/elixir-ls/releases) // Version 0.15.0 is the one that worked for the elixir and erlang versions installed
+- unzip elixir-ls-v0.15.0.zip -d ~/.elixirls // I usually do ~/.elixirls which won't require to change the lsp.lua file
