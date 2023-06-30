@@ -7,3 +7,6 @@ echo alias cpnvimconfig="cp -r ~/.config/nvim ~/Documents/dot-files/ && cd ~/Doc
 
 # Add to ~/.tmux.conf in case we do not see colors
 echo set -g default-terminal "screen-256color" >> ~/.tmux.conf
+
+# Copy nvim config to HOME
+cp -r ./nvim ~/.config/ 
