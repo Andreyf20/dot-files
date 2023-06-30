@@ -14,6 +14,7 @@ Linters:
 - pip install --upgrade autopep8 // for python might need to install pip first
 - dotnet tool install csharpier -g // for csharp
 - Read ElixirLs section
+- asdf plugin add lua-language-server && asdf install lua-language-server latest && asdf global lua-language-server latest
 
 When adding new language need to change:
 

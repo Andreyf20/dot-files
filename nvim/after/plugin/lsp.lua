@@ -57,7 +57,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
   -- This remap requires the plugin null-ls to be installed
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>ff", "<cmd>lua vim.lsp.buf.format()<CR>", {})
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ff", "<cmd>lua vim.lsp.buf.format()<CR>", {})
 end)
 
 lsp.setup()
