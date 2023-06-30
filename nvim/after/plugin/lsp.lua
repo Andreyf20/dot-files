@@ -17,8 +17,6 @@ lsp.nvim_workspace()
 
 -- Configure this in the cmp.lua file
 -- Disabling tab in the lsp file not working no idea why so i'm keeping this here
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
 --  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 --  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
@@ -43,7 +41,7 @@ lsp.set_preferences({
     }
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
