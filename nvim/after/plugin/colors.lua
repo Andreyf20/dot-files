@@ -1,6 +1,6 @@
 function colorTerminal(color)
   -- color = color or "tokyonight-night"
-  color = color or "duskfox"
+  color = color or "carbonfox"
   vim.cmd.colorscheme(color)
 
   -- Set transparent background, disable this if not necessary
