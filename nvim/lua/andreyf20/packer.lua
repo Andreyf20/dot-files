@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 
   -- Nice color theme
   use('folke/tokyonight.nvim')
+  use('EdenEast/nightfox.nvim')
 
   -- Blazingly fast file swap
   use('ThePrimeagen/harpoon')
