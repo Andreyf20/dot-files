@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'cssls',
   'pyright',
   'elixirls',
+  'gopls',
 })
 
 -- Fix Undefined global 'vim'

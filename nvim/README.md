@@ -15,6 +15,9 @@ Linters:
 - dotnet tool install csharpier -g // for csharp
 - Read ElixirLs section
 - asdf plugin add lua-language-server && asdf install lua-language-server latest && asdf global lua-language-server latest
+- go install github.com/incu6us/goimports-reviser@latest
+- go install mvdan.cc/gofumpt@latest
+- go install github.com/segmentio/golines@latest
 
 When adding new language need to change:
 
@@ -28,7 +31,7 @@ ElixirLs // MAKE SURE TO INSTALL THE EXACT VERSIONS (These versions are the only
 - asdf plugin add [erlang](https://github.com/asdf-vm/asdf-erlang.git)
 - asdf plugin-add [elixir](https://github.com/asdf-vm/asdf-elixir.git)
 - sudo apt install automake autoconf libncurses5-dev // called ncurses in Arch
-- asdf install erlang 25.3.2.2 
+- asdf install erlang 25.3.2.2
 - asdf global erlang 25.3.2.2
 - asdf install elixir 1.14.4-otp-25
 - asdf global elixir 1.14.4-otp-25

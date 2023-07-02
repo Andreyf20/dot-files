@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   -- Nice color theme
   use('folke/tokyonight.nvim')
   use('EdenEast/nightfox.nvim')
+  use({ "catppuccin/nvim", as = "catppuccin" })
 
   -- Blazingly fast file swap
   use('ThePrimeagen/harpoon')
@@ -34,7 +35,7 @@ return require('packer').startup(function(use)
   use('github/copilot.vim')
 
   -- Show sticky buffer with the name of the indented block
-  -- use('wellle/context.vim') kinda bugged dont want to deal with it rn
+  use('nvim-treesitter/nvim-treesitter-context')
 
   -- no longer maintained, maybe remove?
   -- Rainbow brackets

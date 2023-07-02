@@ -1,6 +1,7 @@
 function colorTerminal(color)
   -- color = color or "tokyonight-night"
-  color = color or "carbonfox"
+  -- color = color or "duskfox"
+  color = color or "catppuccin-mocha"
   vim.cmd.colorscheme(color)
 
   -- Set transparent background, disable this if not necessary
@@ -9,7 +10,7 @@ function colorTerminal(color)
   --
   -- Set number line colors, CursorLineNr needs to enable cursorline in set.lua
   -- vim.api.nvim_set_hl(0, 'LineNr', { fg = "white"})
-  vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "green"})
+  -- vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "green"})
 end
 
 colorTerminal()

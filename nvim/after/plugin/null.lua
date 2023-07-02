@@ -9,6 +9,9 @@ null_ls.setup({
         null_ls.builtins.formatting.autopep8,
         null_ls.builtins.formatting.csharpier,
         null_ls.builtins.formatting.mix, -- Elixir
+        null_ls.builtins.formatting.gofumpt,
+        null_ls.builtins.formatting.goimports_reviser,
+        null_ls.builtins.formatting.golines,
     },
 
     -- Might wanna remove the auto format on save if it starts giving me errors
