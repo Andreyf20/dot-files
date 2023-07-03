@@ -49,9 +49,11 @@ end)
 vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>")
 
 local shared_snippets = {
-  ls.parser.parse_snippet("lv", "console.log('${1}', ${2})\n${0}"),
+  ls.parser.parse_snippet("lv", "console.log('${1}', ${2});\n${0}"),
 }
 
 ls.add_snippets("javascript",  shared_snippets)
 ls.add_snippets("typescript",  shared_snippets)
+ls.add_snippets("javascriptreact",  shared_snippets)
+ls.add_snippets("typescriptreact",  shared_snippets)
 
