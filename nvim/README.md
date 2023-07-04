@@ -2,10 +2,11 @@ Location for this dir should be -> /home/USER/.config/nvim
 
 Make sure to install gcc g++ ripgrep unzip which are needed for some plugins
 
-LSP:
+LS:
 
 - npm i -g typescript typescript-language-server // for typescrit and javascript
-- npm i -g vscode-langservers-extracted
+- npm i -g vscode-langservers-extracted // for typescritp and javascript
+- asdf plugin add lua-language-server && asdf install lua-language-server latest && asdf global lua-language-server latest
 
 Linters:
 
