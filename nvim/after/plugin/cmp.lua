@@ -4,16 +4,18 @@ local cmp = require 'cmp'
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 local cmp_mappings = cmp.mapping.preset.insert({
-  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+  -- ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+  -- ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+  ['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<Down>'] = cmp.mapping.select_next_item(cmp_select),
   ['<C-Space>'] = cmp.mapping.complete(),
   ['<C-c>'] = cmp.mapping.abort(),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  -- ['<C-y>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 });
 
 -- Disable Tab to use with Copilot
-cmp_mappings['<Tab>'] = vim.NIL
-cmp_mappings['<S-Tab>'] = vim.NIL
+-- Which is being done in lsp.lua
 
 cmp.setup({
   snippet = {
