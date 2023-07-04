@@ -52,8 +52,7 @@ local shared_snippets = {
   ls.parser.parse_snippet("lv", "console.log('${1}', ${2});\n${0}"),
 }
 
-ls.add_snippets("javascript",  shared_snippets)
-ls.add_snippets("typescript",  shared_snippets)
-ls.add_snippets("javascriptreact",  shared_snippets)
-ls.add_snippets("typescriptreact",  shared_snippets)
-
+ls.add_snippets("javascript", shared_snippets)
+ls.add_snippets("typescript", shared_snippets)
+ls.add_snippets("javascriptreact", shared_snippets)
+ls.add_snippets("typescriptreact", shared_snippets)
