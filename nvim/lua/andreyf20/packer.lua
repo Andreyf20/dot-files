@@ -18,8 +18,8 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
   -- Nice color theme
-  use('folke/tokyonight.nvim')
-  use('EdenEast/nightfox.nvim')
+  -- use('folke/tokyonight.nvim')
+  -- use('EdenEast/nightfox.nvim')
   use({ "catppuccin/nvim", as = "catppuccin" })
 
   -- Blazingly fast file swap
@@ -27,9 +27,6 @@ return require('packer').startup(function(use)
 
   -- Get a tree of changes, similar to git integration in VSCode
   use('mbbill/undotree')
-
-  -- i dont even know what this does
-  use('tpope/vim-fugitive')
 
   -- Copilot LOL
   use('github/copilot.vim')
@@ -67,7 +64,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
+      'nvim-tree/nvim-web-devicons', -- optional icons
     },
   }
 
