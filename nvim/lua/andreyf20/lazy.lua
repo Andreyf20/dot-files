@@ -21,7 +21,12 @@ return require('lazy').setup({
   'mbbill/undotree',
 
   -- Copilot LOL
-  'github/copilot.vim',
+  {
+    "zbirenbaum/copilot.lua",
+    -- Lazy load
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
 
   -- Show sticky buffer with the name of the indented block
   'nvim-treesitter/nvim-treesitter-context',
