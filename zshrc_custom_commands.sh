@@ -18,6 +18,8 @@ echo export PATH="$PATH:$HOME/.dotnet/tools" >> ~/.zshrc
 # Add to ~/.tmux.conf in case we do not see colors
 echo set -g default-terminal "screen-256color" >> ~/.tmux.conf
 echo set -as terminal-features ",xterm-256color:RGB" >> ~/.tmux.conf
+echo set -g base-index 1 >> ~/.tmux.conf
+echo setw -g pane-base-index 1 >> ~/.tmux.conf
 
 # Copy nvim config to HOME
 cp -r ./nvim ~/.config/ 
