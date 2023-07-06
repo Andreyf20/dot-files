@@ -39,7 +39,7 @@ return require('lazy').setup({
   'jose-elias-alvarez/null-ls.nvim',
 
   -- Show indent lines
-  'lukas-reineke/indent-blankline.nvim',
+  { 'lukas-reineke/indent-blankline.nvim', version = "2.20.7" },
 
   -- Show preview of colors in the files
   'norcalli/nvim-colorizer.lua',
