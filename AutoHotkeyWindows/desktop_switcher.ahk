@@ -264,3 +264,4 @@ deleteVirtualDesktop()
 #+9::MoveCurrentWindowToDesktop(9)
 
 #Enter::Run, wt
+#`:: ;Disable "Quake terminal" hotkey
