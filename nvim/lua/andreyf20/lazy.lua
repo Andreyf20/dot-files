@@ -55,6 +55,10 @@ return require('lazy').setup({
   -- Comment code
   'numToStr/Comment.nvim',
   'JoosepAlviste/nvim-ts-context-commentstring',
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
   -- Comment end
 
   -- File tree plugin + icons
