@@ -5,9 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
--- require("nvim-tree").setup()
-
+local api = require('nvim-tree.api')
 -- OR setup with some options
 require("nvim-tree").setup({
   update_focused_file = {
@@ -32,6 +30,12 @@ require("nvim-tree").setup({
       quit_on_open = true,
     },
   },
+  on_attach = function(bufnr)
+    api.config.mappings.default_on_attach(bufnr)
+
+    -- Remove keybindings
+    vim.keymap.set('n', '<C-e>', '', { buffer = bufnr })
+  end,
 })
 
 vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>")
