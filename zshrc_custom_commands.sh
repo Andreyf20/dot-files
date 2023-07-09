@@ -1,25 +1,25 @@
-# Git dit change accordingly
-$GIT_DIR="$HOME/Documents/"
-echo alias cdg="~/Documents" >> ~/.zshrc 
-# Refresh git dir and pull
+# Git dir, change accordingly
+echo alias cdg="cd ~/Documents" >> ~/.zshrc 
+# Refresh git repo and pull
 echo alias grefresh="git fetch --prune origin && git pull --ff" >> ~/.zshrc
-# copy nvim settings from git local master to the config/
+# Copy nvim settings from local to the repo dir
 echo alias cpnvimconfig="cp -r ~/.config/nvim ~/Documents/dot-files/ && cd ~/Documents/dot-files/" >> ~/.zshrc
-# open neovim in dirs 
+# Open neovim
 echo alias n="nvim ./" >> ~/.zshrc
 echo alias nzsh="nvim ~/.zshrc" >> ~/.zshrc
 echo alias nconfig="nvim ~/.config/nvim" >> ~/.zshrc
-# setup go path
-echo export GOPATH="$HOME/go" >> ~/.zshrc # Probably not needed as of lates go version
+# Setup go path
+echo export GOPATH="$HOME/go" >> ~/.zshrc
 echo export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin >> ~/.zshrc
-# setup dotnet path
+# Setup dotnet path
 echo export PATH="$PATH:$HOME/.dotnet/tools" >> ~/.zshrc
 
-# Add to ~/.tmux.conf in case we do not see colors
+# Tmux conf
 echo set -g default-terminal "screen-256color" >> ~/.tmux.conf
 echo set -as terminal-features ",xterm-256color:RGB" >> ~/.tmux.conf
 echo set -g base-index 1 >> ~/.tmux.conf
 echo setw -g pane-base-index 1 >> ~/.tmux.conf
 
 # Copy nvim config to HOME
-cp -r ./nvim ~/.config/ 
+cp -r ./nvim ~/.config/ &&
+rm ~/.config/nvim/README.md
