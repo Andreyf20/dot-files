@@ -3,13 +3,17 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+  'lua_ls',
+  -- Javascript, Typescript
   'tsserver',
-  'rust_analyzer',
-  'eslint',
   'cssls',
+  -- Rust
+  'rust_analyzer',
+  -- Python
   'pyright',
-  'elixirls',
+  -- Golang
   'gopls',
+  -- C#
   'csharp_ls',
 })
 
