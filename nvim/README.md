@@ -11,6 +11,15 @@ Make sure to install **gcc g++ ripgrep unzip** which are needed for some plugins
 
 - pip install --upgrade autopep8
 
+### Added languages
+
+- Lua
+- Typescript, Javascript, CSS
+- Rust
+- Python
+- Go
+- C#
+
 ### When adding new language need to change
 
 - null.lua <!-- Auto formatting, formatting on save -->
