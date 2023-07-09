@@ -7,15 +7,9 @@ Make sure to install **gcc g++ ripgrep unzip** which are needed for some plugins
 - npm i -g typescript typescript-language-server
 - npm i -g vscode-langservers-extracted
 
-### Install with Mason <!-- Cannot get them to install automatically -->
+### Install manually <!-- Cannot get them to install automatically -->
 
-- eslint_d
-- prettierd
-- autopep8
-- goimports-reviser
-- gofumpt
-- golines
-- csharpier
+- pip install --upgrade autopep8
 
 ### When adding new language need to change
 

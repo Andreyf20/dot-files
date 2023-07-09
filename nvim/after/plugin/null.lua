@@ -1,21 +1,27 @@
 local null_ls = require("null-ls")
+local mason_null = require("mason-null-ls")
+
+mason_null.setup({
+  ensure_installed = {
+    -- Javascript, Typescript
+    'eslint_d',
+    'prettierd',
+    -- Golang
+    'goimports-reviser',
+    'gofumpt',
+    'golines',
+    -- C#
+    'csharpier',
+  }
+})
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   sources = {
-    -- Javascript, Typescript
-    null_ls.builtins.diagnostics.eslint_d,
-    null_ls.builtins.formatting.prettierd,
     -- Rust
     null_ls.builtins.formatting.rustfmt,
     -- Python
     null_ls.builtins.formatting.autopep8,
-    -- Golang
-    null_ls.builtins.formatting.gofumpt,
-    null_ls.builtins.formatting.goimports_reviser,
-    null_ls.builtins.formatting.golines,
-    -- C#
-    null_ls.builtins.formatting.csharpier,
   },
 
   -- Might wanna remove the auto format on save if it starts giving me errors

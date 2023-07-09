@@ -36,7 +36,14 @@ return require('lazy').setup({
   'p00f/nvim-ts-rainbow',
 
   -- Format files
-  'jose-elias-alvarez/null-ls.nvim',
+  {
+    "jay-babu/mason-null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "williamboman/mason.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+  },
 
   -- Show indent lines
   { 'lukas-reineke/indent-blankline.nvim', version = "2.20.7" },
