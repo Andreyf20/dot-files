@@ -18,6 +18,10 @@ mason_null.setup({
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   sources = {
+    -- Javascript, Typescript, need to keep it here because the auto format on save is not working without it
+    -- but it seems to work for the rest of the languages
+    null_ls.builtins.diagnostics.eslint_d,
+    null_ls.builtins.formatting.prettierd,
     -- Rust
     null_ls.builtins.formatting.rustfmt,
     -- Python
