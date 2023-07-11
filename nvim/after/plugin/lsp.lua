@@ -34,7 +34,11 @@ cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+  mapping = cmp_mappings,
+  preselect = "none",
+  completion = {
+    completeopt = "menu,menuone,noinsert,noselect",
+  },
 })
 
 lsp.set_preferences({
@@ -69,4 +73,3 @@ lsp.setup()
 vim.diagnostic.config({
   virtual_text = true
 })
-
