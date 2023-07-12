@@ -31,11 +31,12 @@ return require('lazy').setup({
   -- Show sticky buffer with the name of the indented block
   'nvim-treesitter/nvim-treesitter-context',
 
-  -- no longer maintained, maybe remove?
   -- Rainbow brackets
-  'p00f/nvim-ts-rainbow',
+  'HiPhish/rainbow-delimiters.nvim',
 
   -- Format files
+  -- Deprecated remove!!!!!!
+  -- RIP: as of August 11 2023
   {
     "jay-babu/mason-null-ls.nvim",
     event = { "BufReadPre", "BufNewFile" },
