@@ -21,5 +21,6 @@ echo 'set -g base-index 1' >> ~/.tmux.conf
 echo 'setw -g pane-base-index 1' >> ~/.tmux.conf
 
 # Copy nvim config to HOME
+mkdir ~/.config/ &&
 cp -r ./nvim ~/.config/nvim/ &&
 rm ~/.config/nvim/README.md
