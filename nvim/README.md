@@ -1,17 +1,9 @@
-Location for this dir should be -> /home/USER/.config/nvim
+# Guide
 
+Location for this dir should be -> /home/USER/.config/nvim
 Make sure to install **gcc g++ ripgrep unzip** which are needed for some plugins
 
-## LS <!-- Maybe i do not need to do this? -->
-
-- npm i -g typescript typescript-language-server
-- npm i -g vscode-langservers-extracted
-
-### Install manually <!-- Cannot get them to install automatically -->
-
-- pip install --upgrade autopep8
-
-### Added languages
+## Added languages
 
 - Lua
 - Typescript, Javascript, CSS
@@ -20,8 +12,26 @@ Make sure to install **gcc g++ ripgrep unzip** which are needed for some plugins
 - Go
 - C#
 
+### LS
+
+- npm i -g typescript typescript-language-server
+- npm i -g vscode-langservers-extracted
+
+### Install formatters manually
+
+- pip install --upgrade autopep8
+- rustfmt auto installed with rust compiler
+
+### Install formatters with Mason
+
+- eslint_d <!-- Javascript, Typescript -->
+- prettierd
+- goimports-reviser <!-- Golang -->
+- gofumpt
+- golines
+- csharpier <!-- C# -->
+
 ### When adding new language need to change
 
-- null.lua <!-- Auto formatting, formatting on save -->
 - lsp.lua <!-- Language server -->
 - treesitter.lua <!-- Syntax highlighting -->

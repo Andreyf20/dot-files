@@ -35,16 +35,7 @@ return require('lazy').setup({
   'HiPhish/rainbow-delimiters.nvim',
 
   -- Format files
-  -- Deprecated remove!!!!!!
-  -- RIP: as of August 11 2023
-  {
-    "jay-babu/mason-null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
-    },
-  },
+  -- need to find replacement to auto format
 
   -- Show indent lines
   { 'lukas-reineke/indent-blankline.nvim', version = "2.20.7" },
