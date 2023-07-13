@@ -32,7 +32,7 @@ return require('lazy').setup({
   'nvim-treesitter/nvim-treesitter-context',
 
   -- Rainbow brackets
-  'HiPhish/rainbow-delimiters.nvim',
+  'HiPhish/nvim-ts-rainbow2',
 
   -- Format files
   -- need to find replacement to auto format

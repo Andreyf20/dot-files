@@ -5,6 +5,7 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'lua_ls',
   -- Javascript, Typescript
+  'eslint',
   'tsserver',
   'cssls',
   -- Rust

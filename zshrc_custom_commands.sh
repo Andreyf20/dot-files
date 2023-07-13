@@ -8,6 +8,7 @@ echo 'alias cpnvimconfig="cp -r ~/.config/nvim ~/Documents/dot-files/ && cd ~/Do
 echo 'alias n="nvim ./"' >> ~/.zshrc
 echo 'alias nzsh="nvim ~/.zshrc"' >> ~/.zshrc
 echo 'alias nconfig="nvim ~/.config/nvim"' >> ~/.zshrc
+echo 'alias tmux="tmux -u"' >> ~/.zshrc
 # Setup go path
 echo 'export GOPATH="$HOME/go"' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin' >> ~/.zshrc
@@ -19,6 +20,7 @@ echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
 echo 'set -as terminal-features ",xterm-256color:RGB"' >> ~/.tmux.conf
 echo 'set -g base-index 1' >> ~/.tmux.conf
 echo 'setw -g pane-base-index 1' >> ~/.tmux.conf
+echo 'set-option -sg escape-time 10' >> ~/.tmux.conf
 
 # Copy nvim config to HOME
 mkdir ~/.config/ &&
