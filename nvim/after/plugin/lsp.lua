@@ -4,18 +4,18 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'lua_ls',
-  -- Javascript, Typescript
-  'eslint',
-  'tsserver',
-  'cssls',
-  -- Rust
-  'rust_analyzer',
-  -- Python
-  'pyright',
-  -- Golang
-  'gopls',
-  -- C#
-  'csharp_ls',
+  -- -- Javascript, Typescript
+  -- 'eslint',
+  -- 'tsserver',
+  -- 'cssls',
+  -- -- Rust
+  -- 'rust_analyzer',
+  -- -- Python
+  -- 'pyright',
+  -- -- Golang
+  -- 'gopls',
+  -- -- C#
+  -- 'csharp_ls',
 })
 
 -- Fix Undefined global 'vim'
