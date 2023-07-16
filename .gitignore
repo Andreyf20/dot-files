@@ -1,3 +1,6 @@
 # Ignore the nvim plugins cache dir
 nvim/plugin/
 nvim/lazy-lock.json
+
+# Glazewm error logs
+glaze-wm/errors.log
