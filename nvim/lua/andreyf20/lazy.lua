@@ -32,7 +32,26 @@ return require('lazy').setup({
   'nvim-treesitter/nvim-treesitter-context',
 
   -- Rainbow brackets
-  'HiPhish/nvim-ts-rainbow2',
+  'HiPhish/rainbow-delimiters.nvim',
+
+  -- Auto pairs
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+
+  -- Surround command
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Leave empty to use defaults
+      })
+    end
+  },
 
   -- Format files
   -- need to find replacement to auto format
