@@ -5,18 +5,21 @@ gaps:
 general:
   focus_follow_cursor: true
   # Whether to show floating windows as always on top.
-  show_floating_on_top: true
+  show_floating_on_top: false
   floating_window_move_amount: "5%"
   # When enabled, switching to the current workspace activates the previously focused workspace
   toggle_workspace_on_refocus: false
-  focus_border_color: "#335d5b"
+  focus_border_color: "#ff8287"
 
 bar:
   height: "30px"
   position: "top"
   opacity: 1.0
-  background: "#30374a"
-  foreground: "#fff"
+  # background: "#20242cc4"
+  background: "#1f1f1f"
+  # foreground: "#ffffff"
+  foreground: "#ff8287"
+  # font_family: "Segoe UI"
   font_family: "Hack Nerd Font"
   font_size: "13px"
   padding: "4px 6px"
