@@ -166,6 +166,10 @@ keybindings:
   - command: "exec wt"
     binding: "Alt+Enter"
 
+  # Start explorer
+  - command: "exec explorer.exe"
+    binding: "Alt+E"
+
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
     binding: "Alt+Y"
