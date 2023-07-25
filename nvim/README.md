@@ -19,8 +19,7 @@ Make sure to install **gcc g++ ripgrep unzip** which are needed for some plugins
 
 ### Install formatters manually
 
-- pip install --upgrade autopep8
-- rustfmt auto installed with rust compiler
+- pip install black
 
 ### Install formatters with Mason
 
