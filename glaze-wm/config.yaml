@@ -23,6 +23,7 @@ bar:
   offset_x: "0"
   offset_y: "0"
   border_radius: "0"
+  always_on_top: false
   component_separator:
     label: " - "
   components_left:
@@ -92,8 +93,15 @@ binding_modes:
       # Press enter/escape to return to default keybindings.
       - command: "binding mode none"
         bindings: ["Escape", "Enter"]
+          
+  - name: "disabled"
+    keybindings:
+      - command: "binding mode none" # command to exit the binding mode
+        bindings: ["Alt+Shift+Escape"] # use whatever keybinding that won't interfere while you play games etc.
 
 keybindings:
+  - command: "binding mode disabled"
+    binding: "Alt+N"
   # Shift focus in a given direction.
   - command: "focus left"
     bindings: ["Alt+H", "Alt+Left"]
