@@ -20,14 +20,6 @@ return require('lazy').setup({
   -- Get a tree of changes, similar to git integration in VSCode
   'mbbill/undotree',
 
-  -- Copilot LOL
-  {
-    "zbirenbaum/copilot.lua",
-    -- Lazy load
-    cmd = "Copilot",
-    event = "InsertEnter",
-  },
-
   -- Show sticky buffer with the name of the indented block
   'nvim-treesitter/nvim-treesitter-context',
 
@@ -57,7 +49,7 @@ return require('lazy').setup({
   -- need to find replacement to auto format
 
   -- Show indent lines
-  { 'lukas-reineke/indent-blankline.nvim', version = "2.20.7" },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- Show preview of colors in the files
   'norcalli/nvim-colorizer.lua',
