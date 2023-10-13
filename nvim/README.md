@@ -1,7 +1,7 @@
 # Guide
 
 Location for this dir should be -> /home/USER/.config/nvim
-Make sure to install **gcc g++ ripgrep unzip** which are needed for some plugins
+Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plugins
 
 ## Added languages
 
