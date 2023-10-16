@@ -34,3 +34,4 @@ Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plug
 
 - lsp.lua <!-- Language server -->
 - treesitter.lua <!-- Syntax highlighting -->
+- conform.lua <!-- Formatter -->
