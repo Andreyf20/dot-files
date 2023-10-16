@@ -96,4 +96,10 @@ return require('lazy').setup({
       { 'L3MON4D3/LuaSnip' },     -- Required
     }
   },
+
+  -- Copilot free? Currently testing this
+  {
+    'codota/tabnine-nvim',
+    build = "./dl_binaries.sh"
+  },
 })
