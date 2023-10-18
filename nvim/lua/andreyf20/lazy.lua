@@ -97,16 +97,17 @@ return require("lazy").setup({
 		},
 	},
 
-	-- Copilot free? Currently testing this
-	{
-		"codota/tabnine-nvim",
-		build = "./dl_binaries.sh",
-	},
-
-	-- Formatter test
+	-- Formatter
 	{
 		"stevearc/conform.nvim",
-		event = { "BufWritePre" },
+		event = "BufWritePre",
 		opts = {},
+	},
+
+	-- Copilot LOL
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
 	},
 })
