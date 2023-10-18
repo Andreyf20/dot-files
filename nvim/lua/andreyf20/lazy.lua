@@ -106,8 +106,7 @@ return require("lazy").setup({
 
 	-- Copilot LOL
 	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
+		"github/copilot.vim",
 		event = "InsertEnter",
 	},
 })
