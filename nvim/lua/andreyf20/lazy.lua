@@ -45,11 +45,14 @@ return require("lazy").setup({
 		end,
 	},
 
-	-- Format files
-	-- need to find replacement to auto format
-
 	-- Show indent lines
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+
+	-- Status Line
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 
 	-- Show preview of colors in the files
 	"norcalli/nvim-colorizer.lua",
