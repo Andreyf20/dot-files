@@ -107,9 +107,9 @@ return require("lazy").setup({
 		opts = {},
 	},
 
-	-- Copilot LOL
+	-- Copilot replacement
 	{
-		"github/copilot.vim",
-		event = "InsertEnter",
+		"Exafunction/codeium.vim",
+		event = "BufEnter",
 	},
 })
