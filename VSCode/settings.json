@@ -1,0 +1,90 @@
+{
+  "editor.fontSize": 18,
+  "workbench.iconTheme": "material-icon-theme",
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "editor.guides.bracketPairs": true,
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "Rainier - Retro",
+  "editor.fontFamily": "'Hack Nerd Font', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.cursorBlinking": "expand",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "editor.minimap.scale": 2,
+  "editor.minimap.renderCharacters": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabSize": 2,
+  "terminal.integrated.fontFamily": "'Hack Nerd Font', 'Fira Code', Consolas, 'Courier New', monospace",
+  // Color for the cursor
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ffff00",
+    "terminalCursor.foreground": "#ffff00"
+  },
+  "editor.stickyScroll.enabled": true,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 20,
+  // Vim config
+  "vim.hlsearch": true,
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#ffff00",
+  "vim.highlightedyank.textColor": "black",
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
+
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+    // FILE TREE
+    {
+      "before": ["leader", "p", "v"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["<S-k>"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+  ]
+}

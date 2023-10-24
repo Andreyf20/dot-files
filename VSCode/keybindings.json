@@ -1,0 +1,29 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  // Vim config
+  // FILE TREE
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.newWindow",
+    "when": "!explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+  }
+]
