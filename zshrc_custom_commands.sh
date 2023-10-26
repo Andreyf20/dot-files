@@ -9,6 +9,7 @@ echo 'alias n="nvim ./"' >> ~/.zshrc
 echo 'alias nzsh="nvim ~/.zshrc"' >> ~/.zshrc
 echo 'alias nconfig="nvim ~/.config/nvim"' >> ~/.zshrc
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
+echo 'alias lg="lazygit"' >> ~/.zshrc
 # Setup go path
 echo 'export GOPATH="$HOME/go"' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin' >> ~/.zshrc
@@ -24,3 +25,7 @@ cp ./tmux.conf ~/.tmux.conf
 mkdir ~/.config/ &&
 cp -r ./nvim ~/.config/nvim/ &&
 rm ~/.config/nvim/README.md
+
+# Lazygit conf
+mkdir ~/.config/lazygit/ &&
+cp ./lazygit/config.yml ~/.config/lazygit/config.yml
