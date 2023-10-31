@@ -14,6 +14,7 @@ require("conform").setup({
 		-- python = { "black" },
 		-- -- Go
 		-- go = { "gofumpt" },
+		-- yaml = { "prettierd", "prettier" },
 		-- -- C#
 		-- c_sharp = { "csharpier" },
 	},

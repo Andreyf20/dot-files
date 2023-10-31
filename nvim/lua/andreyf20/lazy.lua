@@ -14,23 +14,26 @@ return require("lazy").setup({
 	-- CLASSIC tree sitter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
+	-- Show sticky buffer with the name of the indented block
+	"nvim-treesitter/nvim-treesitter-context",
+
 	-- Blazingly fast file swap
 	"ThePrimeagen/harpoon",
 
 	-- Get a tree of changes, similar to git integration in VSCode
 	"mbbill/undotree",
 
-	-- Show sticky buffer with the name of the indented block
-	"nvim-treesitter/nvim-treesitter-context",
-
 	-- Rainbow brackets
 	"HiPhish/rainbow-delimiters.nvim",
+
+	-- Show indent lines
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
 	-- Auto pairs
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		opts = {}, -- this is equalent to setup({}) function
+		opts = {}, -- This is equalent to setup({}) function
 	},
 
 	-- Surround command
@@ -44,9 +47,6 @@ return require("lazy").setup({
 			})
 		end,
 	},
-
-	-- Show indent lines
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
 	-- Status Line
 	{
@@ -83,22 +83,17 @@ return require("lazy").setup({
 	-- LSP
 	{
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v2.x",
+		branch = "v3.x",
 		dependencies = {
 			-- LSP Support
-			{ "neovim/nvim-lspconfig" }, -- Required
-			{ -- Optional
-				"williamboman/mason.nvim",
-				build = function()
-					pcall(vim.cmd, "MasonUpdate")
-				end,
-			},
-			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+			{ "neovim/nvim-lspconfig" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
 
 			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" }, -- Required
-			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-			{ "L3MON4D3/LuaSnip" }, -- Required
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "L3MON4D3/LuaSnip" },
 		},
 	},
 

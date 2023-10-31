@@ -4,12 +4,13 @@ local lspkind = require("lspkind")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 local cmp_mappings = cmp.mapping.preset.insert({
-	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 	["<C-Space>"] = cmp.mapping.complete(),
 	["<C-c>"] = cmp.mapping.abort(),
-	-- ["<C-y>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-	["<CR>"] = cmp.mapping.confirm({ select = true }),
+	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+	["<C-y>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+	["<C-u>"] = cmp.mapping.scroll_docs(-4),
+	["<C-d>"] = cmp.mapping.scroll_docs(4),
 })
 
 cmp.setup({
