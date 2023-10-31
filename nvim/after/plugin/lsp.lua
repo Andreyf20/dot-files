@@ -6,7 +6,7 @@ lsp_zero.on_attach(function(_, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
-mason.setup()
+mason.setup({})
 mason_lspconfig.setup({
 	ensure_installed = {
 		"lua_ls",
@@ -22,5 +22,9 @@ mason_lspconfig.setup({
 		-- "gopls",
 		-- -- C#
 		-- "csharp_ls",
+	},
+	-- Setup LSPs automatically
+	handlers = {
+		lsp_zero.default_setup,
 	},
 })
