@@ -1,5 +1,6 @@
 -- Currently using LuaSnip
 local cmp = require("cmp")
+local lspkind = require("lspkind")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 local cmp_mappings = cmp.mapping.preset.insert({
@@ -30,6 +31,15 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "buffer" },
 	}),
+	-- Enable pictogram icons for lsp/autocompletion
+	formatting = {
+		expandable_indicator = true,
+		format = lspkind.cmp_format({
+			mode = "symbol_text",
+			maxwidth = 50,
+			ellipsis_char = "...",
+		}),
+	},
 })
 
 -- Set configuration for specific filetype.

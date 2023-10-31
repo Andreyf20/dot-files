@@ -1,6 +1,8 @@
+-- TODO: "remaster" this file, it is extremely messy honestly
+-- bunch of commented stuff and things interfering with each other
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+-- lsp.preset("recommended")
 
 lsp.ensure_installed({
 	"lua_ls",
