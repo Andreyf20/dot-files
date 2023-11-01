@@ -28,7 +28,8 @@ gui:
     searchingActiveBorderColor:
       - "#f9e2af"
   nerdFontsVersion: "3"
-# git:
-#   paging:
-#     colorArg: never
-#     pager: delta --dark --paging=never
+
+git:
+  paging:
+    colorArg: never
+    pager: diff-so-fancy
