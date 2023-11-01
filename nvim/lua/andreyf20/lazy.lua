@@ -109,4 +109,10 @@ return require("lazy").setup({
 		"Exafunction/codeium.vim",
 		event = "BufEnter",
 	},
+
+	-- Git plugins
+	{
+		"lewis6991/gitsigns.nvim",
+		event = "BufRead",
+	},
 })
