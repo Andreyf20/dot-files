@@ -115,4 +115,9 @@ return require("lazy").setup({
 		"lewis6991/gitsigns.nvim",
 		event = "BufRead",
 	},
+	-- Add lazygit to nvim
+	{
+		"voldikss/vim-floaterm",
+		event = "BufEnter",
+	},
 })
