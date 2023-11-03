@@ -1,3 +1,10 @@
+require("harpoon").setup({
+	global_settings = {
+		-- Set marks per git branch
+		mark_branch = true,
+	},
+})
+
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
