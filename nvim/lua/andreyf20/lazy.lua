@@ -1,26 +1,26 @@
 return require("lazy").setup({
-	-- Fuzzy finder, make sure to install ripgrep
+	-- Fuzzy finder, make sure to install ripgrep fd
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.4",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- Nice color theme
+	-- Color themes
 	-- use('folke/tokyonight.nvim')
 	-- use('EdenEast/nightfox.nvim')
 	{ "catppuccin/nvim", name = "catppuccin" },
 
-	-- CLASSIC tree sitter
+	-- Syntax highlighting
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
-	-- Show sticky buffer with the name of the indented block
+	-- Show sticky buffer at the top
 	"nvim-treesitter/nvim-treesitter-context",
 
 	-- Blazingly fast file swap
 	"ThePrimeagen/harpoon",
 
-	-- Get a tree of changes, similar to git integration in VSCode
+	-- List of changes to the current buffer
 	"mbbill/undotree",
 
 	-- Rainbow brackets
@@ -42,9 +42,7 @@ return require("lazy").setup({
 		version = "*", -- Use for stability; omit to use `main` branch for the latest features
 		event = "VeryLazy",
 		config = function()
-			require("nvim-surround").setup({
-				-- Leave empty to use defaults
-			})
+			require("nvim-surround").setup({})
 		end,
 	},
 
@@ -55,21 +53,25 @@ return require("lazy").setup({
 	},
 
 	-- Show preview of colors in the files
-	"norcalli/nvim-colorizer.lua",
-
-	-- Snippet completion plugins
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-buffer",
-	"hrsh7th/cmp-path",
-	"hrsh7th/cmp-nvim-lsp",
-	"saadparwaiz1/cmp_luasnip",
-	-- Pictograms plugin
-	"onsails/lspkind.nvim",
-	-- Snippets end
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+		event = "BufEnter",
+	},
 
 	-- Comment code
-	"numToStr/Comment.nvim",
-	"JoosepAlviste/nvim-ts-context-commentstring",
+	{
+		"numToStr/Comment.nvim",
+		event = "BufEnter",
+		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
+		config = function()
+			require("Comment").setup({
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+			})
+		end,
+	},
 	-- Comment end
 
 	-- File tree plugin + icons
@@ -90,10 +92,16 @@ return require("lazy").setup({
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 
-			-- Autocompletion
+			-- Snippet completion plugins
 			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
 			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "saadparwaiz1/cmp_luasnip" },
 			{ "L3MON4D3/LuaSnip" },
+			-- Pictograms plugin
+			{ "onsails/lspkind.nvim" },
+			-- Snippets end
 		},
 	},
 
@@ -115,9 +123,10 @@ return require("lazy").setup({
 		"lewis6991/gitsigns.nvim",
 		event = "BufRead",
 	},
-	-- Add lazygit to nvim
+	-- lazygit
 	{
 		"voldikss/vim-floaterm",
 		event = "BufEnter",
 	},
+	-- Git plugins end
 })

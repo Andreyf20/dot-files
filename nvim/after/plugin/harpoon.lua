@@ -1,7 +1,7 @@
 require("harpoon").setup({
 	global_settings = {
 		-- Set marks per git branch
-		mark_branch = true,
+		mark_branch = false,
 	},
 })
 
