@@ -26,10 +26,4 @@ require("nvim-treesitter.configs").setup({
 
 		additional_vim_regex_highlighting = false,
 	},
-
-	-- Context commentstring
-	context_commentstring = {
-		enable = true,
-		enable_autocmd = false,
-	},
 })
