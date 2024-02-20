@@ -1,7 +1,7 @@
 # MacOS dir = ~/Library/Application Support/lazygit
 os:
   # To be able to use it with nvim
-  editCommand: "floatterm"
+  edit: "floatterm"
 
 gui:
   # Use the mocha catppuccin theme
