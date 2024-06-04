@@ -4,3 +4,6 @@ nvim/lazy-lock.json
 
 # Glazewm error logs
 glaze-wm/errors.log
+
+# Ignore .DS_Store files for MacOs
+.DS_Store
