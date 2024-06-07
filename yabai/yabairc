@@ -15,7 +15,8 @@ yabai -m config window_gap 10
 # -- mouse settings --
 
 # center mouse on window with focus
-yabai -m config mouse_follows_focus on
+# Annoying when closing windows it moves the cursor
+# yabai -m config mouse_follows_focus on
 
 # focus window when mouse enters
 yabai -m config focus_follows_mouse autofocus

@@ -10,6 +10,7 @@ echo 'alias nzsh="nvim ~/.zshrc"' >> ~/.zshrc
 echo 'alias nconfig="nvim ~/.config/nvim"' >> ~/.zshrc
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
 echo 'alias lg="lazygit"' >> ~/.zshrc
+echo 'alias n.config="nvim ~/.config/"' >> ~/.zshrc
 # Setup go path
 echo 'export GOPATH="$HOME/go"' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin' >> ~/.zshrc
