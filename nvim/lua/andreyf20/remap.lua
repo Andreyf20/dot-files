@@ -4,6 +4,8 @@ vim.g.mapleader = " "
 
 -- Save file
 vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>")
+-- Save file and quit
+vim.keymap.set("n", "<leader>q", "<cmd>wq<CR>")
 
 -- Move lines up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
