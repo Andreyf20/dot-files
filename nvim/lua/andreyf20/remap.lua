@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 -- Save file
 vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>")
 -- Save file and quit
-vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
+vim.keymap.set("n", "<leader>qw", "<cmd>wq<CR>")
 -- Quit without saving, change to qa! to force without warning
 vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
 

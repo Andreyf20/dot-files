@@ -47,3 +47,16 @@ lsp_zero.on_attach(function(_, bufnr)
 		vim.lsp.buf.rename()
 	end)
 end)
+
+-- Setup for swift source kit lsp
+-- local lspconfig = require("lspconfig")
+--
+-- lspconfig.sourcekit.setup({
+-- 	capabilities = {
+-- 		workspace = {
+-- 			didChangeWatchedFiles = {
+-- 				dynamicRegistration = true,
+-- 			},
+-- 		},
+-- 	},
+-- })

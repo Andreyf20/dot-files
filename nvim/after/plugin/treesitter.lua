@@ -12,6 +12,7 @@ require("nvim-treesitter.configs").setup({
 		-- "python",
 		-- "go",
 		-- "c_sharp",
+		-- "swift", -- Needs nodejs what?
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)

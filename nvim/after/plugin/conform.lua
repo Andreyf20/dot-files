@@ -17,6 +17,8 @@ require("conform").setup({
 		-- yaml = { "prettierd", "prettier" },
 		-- -- C#
 		-- c_sharp = { "csharpier" },
+		-- -- Swift
+		-- swift = { "swiftformat" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
