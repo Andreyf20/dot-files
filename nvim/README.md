@@ -11,15 +11,22 @@ Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plug
 - Python
 - Go
 - C#
+- Swift (MacOS only maybe?)
 
 ### LS
 
 - npm i -g typescript typescript-language-server
 - npm i -g vscode-langservers-extracted
+- swift sourcekit-lsp should be installed with xcode
+
+### Treesitter
+
+- swift installation requires nodejs for some reason
 
 ### Install formatters manually
 
 - pip install black
+- brew install swiftformat
 
 ### Install formatters with Mason
 
