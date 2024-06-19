@@ -40,6 +40,17 @@ mkdir ~/.config/ &&
 cp -r ./nvim ~/.config/nvim/ &&
 rm ~/.config/nvim/README.md
 
-# Lazygit conf, this is the linux dir the macos dir is different (~/Library/Application Support/lazygit)
-mkdir ~/.config/lazygit/ &&
-cp ./lazygit/config.yml ~/.config/lazygit/config.yml
+# Lazygit conf, the linux dir and the macos dir is different (~/Library/Application Support/lazygit)
+# Untested maybe it works?
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # Linux
+  mkdir ~/.config/lazygit/ &&
+  cp ./lazygit/config.yml ~/.config/lazygit/config.yml
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Mac OSX
+  mkdir ~/Library/Application\ Support/lazygit/ &&
+  cp ./lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
+else
+  # Unknown.
+  echo 'Error: Unknown OS, cannot set lazygit config do it manually'
+fi
