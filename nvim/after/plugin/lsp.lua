@@ -48,9 +48,20 @@ lsp_zero.on_attach(function(_, bufnr)
 	end)
 end)
 
+local lspconfig = require("lspconfig")
+
+lspconfig.lua_ls.setup({
+	settings = {
+		Lua = {
+			diagnostics = {
+				-- Fix for global vim warning
+				globals = { "vim" },
+			},
+		},
+	},
+})
+
 -- Setup for swift source kit lsp
--- local lspconfig = require("lspconfig")
---
 -- lspconfig.sourcekit.setup({
 -- 	capabilities = {
 -- 		workspace = {

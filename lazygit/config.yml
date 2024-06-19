@@ -1,4 +1,3 @@
-# MacOS dir = ~/Library/Application Support/lazygit
 os:
   # To be able to use it with nvim
   edit: "floatterm"

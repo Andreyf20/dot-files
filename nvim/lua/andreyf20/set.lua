@@ -1,5 +1,5 @@
 --vim.opt.guicursor = ""
---vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 --vim.opt.colorcolumn = "80"
 
 vim.opt.nu = true
@@ -19,6 +19,7 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+-- If true set this remap to stop highlighting vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
