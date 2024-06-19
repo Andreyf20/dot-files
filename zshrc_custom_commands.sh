@@ -11,7 +11,8 @@ echo 'alias n="nvim ./"' >> ~/.zshrc
 echo 'alias nzsh="nvim ~/.zshrc"' >> ~/.zshrc
 echo 'alias nconfig="nvim ~/.config/nvim"' >> ~/.zshrc
 echo 'alias n.config="nvim ~/.config/"' >> ~/.zshrc
-echo 'alias fzfn="fzf --preview=\"cat {}\" | xargs -r nvim"' >> ~/.zshrc # xargs prevents nvim from opening an empty file
+echo 'alias fzff="cd && fzf --preview=\"cat {}\" | xargs -r nvim"' >> ~/.zshrc # xargs prevents nvim from opening an empty file
+echo 'alias fzfd="cd && find . -type d -print | fzf | xargs -r nvim"' >> ~/.zshrc
 # Other extra commands
 echo 'alias cat="bat"' >> ~/.zshrc # Remember to install bat
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
