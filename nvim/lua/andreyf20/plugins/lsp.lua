@@ -102,7 +102,8 @@ return {
 		end)
 
 		-- Setup for swift source kit lsp
-		-- lspconfig.sourcekit.setup({
+		-- require("lspconfig").sourcekit.setup({
+		-- 	on_attach = lsp_zero.on_attach,
 		-- 	capabilities = {
 		-- 		workspace = {
 		-- 			didChangeWatchedFiles = {
