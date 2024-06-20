@@ -26,6 +26,17 @@ return {
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
 
+		-- Playing around with inlay hints
+		local enable_inlay_hints = function(client, bufnr)
+			if client.server_capabilities.inlayHintProvider then
+				vim.lsp.inlay_hint.enable(true, { buffer = bufnr })
+				vim.keymap.set("n", "<leader>th", function()
+					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { buffer = bufnr })
+					print("Toggled inlay hints: " .. tostring(vim.lsp.inlay_hint.is_enabled()))
+				end)
+			end
+		end
+
 		mason.setup({})
 		mason_lspconfig.setup({
 			ensure_installed = {
@@ -43,15 +54,33 @@ return {
 				-- -- C#
 				-- "csharp_ls",
 			},
-			-- Setup LSPs automatically
 			handlers = {
+				-- Setup LSPs automatically
 				lsp_zero.default_setup,
+				-- Setup LSPs manually
+				["lua_ls"] = function()
+					require("lspconfig").lua_ls.setup({
+						settings = {
+							Lua = {
+								diagnostics = {
+									-- Fix for global vim warning
+									globals = { "vim" },
+								},
+								hint = {
+									enable = true,
+								},
+							},
+						},
+						on_attach = lsp_zero.on_attach, -- enable_inlay_hints,
+						capabilities = lsp_zero.capabilities,
+					})
+				end,
 			},
 		})
 
 		lsp_zero.on_attach(function(_, bufnr)
 			lsp_zero.default_keymaps({ buffer = bufnr })
-			-- Keybinds
+			-- Custom Keybinds
 			vim.keymap.set("n", "gd", function()
 				vim.lsp.buf.definition()
 			end)
@@ -71,19 +100,6 @@ return {
 				vim.lsp.buf.rename()
 			end)
 		end)
-
-		local lspconfig = require("lspconfig")
-
-		lspconfig.lua_ls.setup({
-			settings = {
-				Lua = {
-					diagnostics = {
-						-- Fix for global vim warning
-						globals = { "vim" },
-					},
-				},
-			},
-		})
 
 		-- Setup for swift source kit lsp
 		-- lspconfig.sourcekit.setup({
@@ -204,6 +220,7 @@ return {
 
 		local shared_snippets = {
 			ls.parser.parse_snippet("lv", "console.log('${1}', ${2});\n${0}"),
+			ls.parser.parse_snippet("dv", "<div>${1}</div>\n"),
 		}
 
 		ls.add_snippets("javascript", shared_snippets)
