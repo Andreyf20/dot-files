@@ -263,5 +263,5 @@ deleteVirtualDesktop()
 !+8::MoveCurrentWindowToDesktop(8)
 !+9::MoveCurrentWindowToDesktop(9)
 
-!Enter::Run, wt
+#Enter::Run, wt
 #`::
