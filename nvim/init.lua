@@ -17,7 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup plugins
-require("andreyf20.lazy")
+require("lazy").setup("andreyf20.plugins")
 
 -- Highlight yanked text
 vim.cmd([[
@@ -29,3 +29,6 @@ vim.cmd([[
 
 -- Could play around with this more to set a custom color but works for now
 -- vim.api.nvim_set_hl(0, 'highlight_yank', { fg = "green", bg = "black" })
+
+-- Setup color theme
+require("andreyf20.color")
