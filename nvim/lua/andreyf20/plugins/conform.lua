@@ -14,13 +14,14 @@ return {
 				-- javascriptreact = { { "prettierd", "prettier" } },
 				-- typescriptreact = { { "prettierd", "prettier" } },
 				-- css = { { "prettierd", "prettier" } },
+				-- yaml = { "prettierd", "prettier" },
+				-- xml = { "prettierd", "prettier" },
 				-- -- Rust
 				-- rust = { "rustfmt" },
 				-- -- Python
 				-- python = { "black" },
 				-- -- Go
 				-- go = { "gofumpt" },
-				-- yaml = { "prettierd", "prettier" },
 				-- -- C#
 				-- c_sharp = { "csharpier" },
 				-- -- Swift
