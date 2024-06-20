@@ -1,7 +1,7 @@
 -- Code Formatter
 return {
 	"stevearc/conform.nvim",
-	event = "BufWritePre",
+	event = "BufEnter",
 	opts = {},
 	config = function()
 		require("conform").setup({
@@ -9,13 +9,13 @@ return {
 				lua = { "stylua" },
 				-- -- Typesript Javascript
 				-- Use a sub-list to run only the first available formatter
-				-- javascript = { { "prettierd", "prettier" } },
-				-- typescript = { { "prettierd", "prettier" } },
-				-- javascriptreact = { { "prettierd", "prettier" } },
-				-- typescriptreact = { { "prettierd", "prettier" } },
-				-- css = { { "prettierd", "prettier" } },
-				-- yaml = { "prettierd", "prettier" },
-				-- xml = { "prettierd", "prettier" },
+				-- javascript = { "prettierd" },
+				-- typescript = { "prettierd" },
+				-- javascriptreact = { "prettierd" },
+				-- typescriptreact = { "prettierd" },
+				-- css = { "prettierd" },
+				-- yaml = { "prettierd" },
+				-- xml = { "prettierd" },
 				-- -- Rust
 				-- rust = { "rustfmt" },
 				-- -- Python
@@ -26,6 +26,8 @@ return {
 				-- c_sharp = { "csharpier" },
 				-- -- Swift
 				-- swift = { "swiftformat" },
+				-- -- Godot, install using pip the mason package does not work
+				-- gdscript = { "gdformat" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()

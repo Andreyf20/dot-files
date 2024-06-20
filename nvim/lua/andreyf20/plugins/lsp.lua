@@ -101,7 +101,7 @@ return {
 			end)
 		end)
 
-		-- Setup for swift source kit lsp
+		-- Swift, should just work if XCode is installed
 		-- require("lspconfig").sourcekit.setup({
 		-- 	on_attach = lsp_zero.on_attach,
 		-- 	capabilities = {
@@ -111,6 +111,12 @@ return {
 		-- 			},
 		-- 		},
 		-- 	},
+		-- })
+
+		-- Godot, should just work if Godot is installed
+		-- require("lspconfig").gdscript.setup({
+		-- 	on_attach = lsp_zero.on_attach,
+		-- 	capabilities = lsp_zero.capabilities,
 		-- })
 
 		-- Old CMP.lua config
