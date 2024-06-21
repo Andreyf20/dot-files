@@ -1,12 +1,8 @@
 {
   "editor.fontSize": 18,
   "workbench.iconTheme": "material-icon-theme",
-  "[python]": {
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
   "editor.guides.bracketPairs": true,
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "workbench.colorTheme": "Rainier - Retro",
   "editor.fontFamily": "'Hack Nerd Font', 'Fira Code', Consolas, 'Courier New', monospace",
   "editor.cursorBlinking": "expand",
@@ -48,7 +44,7 @@
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontSize": 20,
   // Vim config
-  "vim.hlsearch": true,
+  "vim.hlsearch": false,
   "vim.foldfix": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "#ffff00",
@@ -61,8 +57,8 @@
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
     // switch b/w buffers
-    { "before": ["<S-h>"], "commands": [":bprevious"] },
-    { "before": ["<S-l>"], "commands": [":bnext"] },
+    { "before": ["<C-h>"], "commands": [":bprevious"] },
+    { "before": ["<C-l>"], "commands": [":bnext"] },
     // FILE TREE
     {
       "before": ["leader", "p", "v"],
@@ -80,6 +76,14 @@
     {
       "before": ["<S-k>"],
       "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "p", "s"],
+      "commands": ["workbench.view.search.focus"]
+    },
+    {
+      "before": ["<leader>", "p", "f"],
+      "commands": ["workbench.action.quickOpen"]
     }
   ],
   "vim.visualModeKeyBindings": [
