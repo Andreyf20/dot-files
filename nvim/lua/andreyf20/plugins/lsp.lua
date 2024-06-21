@@ -113,12 +113,6 @@ return {
 		-- 	},
 		-- })
 
-		-- Godot, should just work if Godot is installed
-		-- require("lspconfig").gdscript.setup({
-		-- 	on_attach = lsp_zero.on_attach,
-		-- 	capabilities = lsp_zero.capabilities,
-		-- })
-
 		-- Old CMP.lua config
 		-- Currently using LuaSnip
 		local cmp = require("cmp")

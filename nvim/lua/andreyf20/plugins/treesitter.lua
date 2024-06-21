@@ -17,10 +17,6 @@ return {
 				-- "go",
 				-- "c_sharp",
 				-- "swift", -- Needs nodejs what?
-				-- Godot tools
-				-- "gdscript",
-				-- "godot_resource",
-				-- "gdshader",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)

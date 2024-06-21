@@ -26,8 +26,6 @@ return {
 				-- c_sharp = { "csharpier" },
 				-- -- Swift
 				-- swift = { "swiftformat" },
-				-- -- Godot, install using pip the mason package does not work
-				-- gdscript = { "gdformat" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()

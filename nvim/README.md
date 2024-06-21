@@ -12,14 +12,12 @@ Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plug
 - Go
 - C#
 - Swift (MacOS only maybe?)
-- Godot
 
 ### LS
 
 - npm i -g typescript typescript-language-server
 - npm i -g vscode-langservers-extracted
 - swift sourcekit-lsp should be installed with xcode
-- Godot lsp should be installed automatically with Godot
 
 ### Treesitter
 
