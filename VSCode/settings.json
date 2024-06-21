@@ -46,25 +46,40 @@
   // Vim config
   "vim.hlsearch": false,
   "vim.foldfix": true,
+  "vim.useSystemClipboard": false,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "#ffff00",
   "vim.highlightedyank.textColor": "black",
   "editor.lineNumbers": "relative",
   "editor.cursorSurroundingLines": 8,
-
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
-    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
     // switch b/w buffers
-    { "before": ["<C-h>"], "commands": [":bprevious"] },
-    { "before": ["<C-l>"], "commands": [":bnext"] },
+    {
+      "before": ["<C-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": [":bnext"]
+    },
     // FILE TREE
     {
       "before": ["leader", "p", "v"],
       "commands": ["workbench.explorer.fileView.focus"]
     },
-    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
     {
       "before": ["leader", "f", "f"],
       "commands": ["editor.action.formatDocument"]
@@ -88,7 +103,13 @@
   ],
   "vim.visualModeKeyBindings": [
     // Move selected lines while staying in visual mode
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
   ]
 }
