@@ -72,4 +72,5 @@ shift + alt - 7 : yabai -m window --space 7;
 # ctrl + alt - r : brew services restart yabai
 
 # Start applications
-cmd - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
+# cmd - return : osascript -e 'tell application "Kitty" to create window with default profile command ""' || open -na iTerm
+# This creates a new entry in the dock which is annoying just use spotlight should be good enough
