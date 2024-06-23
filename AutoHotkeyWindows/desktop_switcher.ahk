@@ -243,15 +243,16 @@ deleteVirtualDesktop()
 ; #   <- Win
 ; For more, visit https://autohotkey.com/docs/Hotkeys.htm
 
-!+::switchDesktopByNumber(1)
-![::switchDesktopByNumber(2)
-!{::switchDesktopByNumber(3)
-!(::switchDesktopByNumber(4)
-!&::switchDesktopByNumber(5)
-!=::switchDesktopByNumber(6)
-!)::switchDesktopByNumber(7)
-!}::switchDesktopByNumber(8)
-!]::switchDesktopByNumber(9)
+; With the custom symbols layout this actually ends up being shift + windows + numrow
+#1::switchDesktopByNumber(1)
+#2::switchDesktopByNumber(2)
+#3::switchDesktopByNumber(3)
+#4::switchDesktopByNumber(4)
+#5::switchDesktopByNumber(5)
+#6::switchDesktopByNumber(6)
+#7::switchDesktopByNumber(7)
+#8::switchDesktopByNumber(8)
+#9::switchDesktopByNumber(9)
 
 !+1::MoveCurrentWindowToDesktop(1)
 !+2::MoveCurrentWindowToDesktop(2)
