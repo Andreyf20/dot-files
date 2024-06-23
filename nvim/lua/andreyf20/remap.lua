@@ -9,6 +9,9 @@ vim.keymap.set("n", "<leader>qw", "<cmd>wq<CR>")
 -- Quit without saving, change to qa! to force without warning
 vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
 
+-- Do not care about case when searching
+vim.keymap.set("n", "/", "/\\c")
+
 -- Move lines up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
