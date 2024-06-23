@@ -7,8 +7,11 @@ It is recommended to log out/restart after adding the keyboard layout.
 
 ## Keyboard Layout Preview
 
-![Base layer:](./Base.png)
-![Shift layer:](./Shift.png)
+Base layer:
+![Base layer](./Base.png)
+
+Shift layer:
+![Shift layer](./Shift.png)
 
 ### MacOS
 
@@ -18,7 +21,9 @@ Made using [Ukelele](https://software.sil.org/ukelele/).
 
 ### Windows
 
-WIP
+Made using [MSKLC](https://www.microsoft.com/en-us/download/details.aspx?id=102134)
+
+Go to -> Project -> Build -> Install layout
 
 ### Linux
 

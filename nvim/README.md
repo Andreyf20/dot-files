@@ -27,7 +27,6 @@ Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plug
 
 - pip install black
 - brew install swiftformat
-- pip3 install GDToolkit
 
 ### Install formatters with Mason
 
