@@ -23,7 +23,7 @@ return {
 				-- -- Go
 				-- go = { "gofumpt" },
 				-- -- C#
-				-- c_sharp = { "csharpier" },
+				-- cs = { "csharpier" },
 				-- -- Swift
 				-- swift = { "swiftformat" },
 			},
