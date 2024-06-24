@@ -17,7 +17,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup plugins
-require("lazy").setup("andreyf20.plugins")
+require("lazy").setup({
+	spec = "andreyf20.plugins",
+	change_detection = {
+		notify = false, -- Disable annoying message when updating config
+	},
+})
 
 -- Highlight yanked text
 vim.cmd([[
