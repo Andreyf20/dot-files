@@ -8,7 +8,7 @@
 
 -->
 <!--Last edited by Ukelele version 396 on 2024-06-23 at 06:50 (GMT-6)-->
-<keyboard group="126" id="-8193" name="QWERTY_custom_symbols" maxout="2">
+<keyboard group="126" id="-8193" name="custom_symbols_inverted" maxout="2">
     <layouts>
         <layout first="0" last="17" mapSet="16c" modifiers="f4"/>
         <layout first="18" last="18" mapSet="984" modifiers="f4"/>
