@@ -43,7 +43,7 @@ return {
 				"lua_ls",
 				-- -- Javascript, Typescript
 				-- "eslint",
-				-- "tsserver",
+				-- "ts_ls",
 				-- "cssls",
 				-- -- Rust
 				-- "rust_analyzer",
