@@ -43,7 +43,7 @@ echo 'Finished setting up tmux config'
 
 # Nvim conf
 echo 'Setting up nvim config'
-mkdir ~/.config/ &&
+mkdir ~/.config/
 cp -r ./nvim ~/.config/nvim/ &&
 rm ~/.config/nvim/README.md
 echo 'Finished setting up nvim config'

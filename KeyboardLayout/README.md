@@ -34,4 +34,12 @@ Go to -> Project -> Build -> Install layout
 
 ### Linux
 
-WIP
+This uses [Keyd](https://github.com/rvaiya/keyd) a linux tool to overwrite keys, need to find a better way to do this since this probably causes multiple issues, but works for now.
+Put the keyd.conf in `/etc/keyd/default.conf`
+
+Commands:
+```
+sudo systemctl enable keyd --now
+sudo systemctl disable keyd --now
+sudo keyd reload
+```
