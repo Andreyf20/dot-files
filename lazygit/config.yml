@@ -30,5 +30,5 @@ gui:
 
 git:
   paging:
-    colorArg: never
+    colorArg: always
     pager: diff-so-fancy
