@@ -64,3 +64,8 @@ else
 fi
 echo 'Finished setting up lazygit config'
 
+# MangoHud conf
+echo 'Setting up MangoHud config'
+cp -r ./MangoHud ~/.config/MangoHud/ &&
+rm ~/.config/MangoHud/README.md
+echo 'Finished setting up MangoHud config'
