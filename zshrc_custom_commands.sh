@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Git dir, change accordingly
 echo 'Setting up zshrc config'
 echo -e '\n' >> ~/.zshrc
@@ -18,6 +20,7 @@ echo 'alias fzfd="cd && find . -type d -print | fzf | xargs -r nvim"' >> ~/.zshr
 echo 'alias cat="bat"' >> ~/.zshrc # Remember to install bat
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
 echo 'alias lg="lazygit"' >> ~/.zshrc
+echo 'alias ff="clear && fastfetch"' >> ~/.zshrc
 # Setup fzf to work with zsh command history ctrl+r
 echo -e '\n' >> ~/.zshrc
 echo 'source <(fzf --zsh)' >> ~/.zshrc
@@ -64,8 +67,21 @@ else
 fi
 echo 'Finished setting up lazygit config'
 
-# MangoHud conf
-echo 'Setting up MangoHud config'
-cp -r ./MangoHud ~/.config/MangoHud/ &&
-rm ~/.config/MangoHud/README.md
-echo 'Finished setting up MangoHud config'
+# Fastfetch conf
+echo 'Setting up Fastfetch config'
+mkdir ~/.config/fastfetch/
+cp ./Fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+echo 'Finished setting up Fastfetch config'
+
+# Optional confs
+if [[ $1 == "optionalconfs" ]]; then
+  echo -e '\nOptional Confs'
+	# MangoHud conf
+	echo 'Setting up MangoHud config'
+	cp -r ./MangoHud ~/.config/MangoHud/ &&
+	rm ~/.config/MangoHud/README.md
+	echo 'Finished setting up MangoHud config'
+else
+  echo 'No optional confs'
+fi
+
