@@ -1,11 +1,14 @@
 # Font confs
 font-family = 'Fira Code'
-font-size = 26
+font-size = 22
 
 # Window confs
 window-decoration = false
 background-opacity = 0.86
 background-blur-radius = 10
+
+# Keybind confs
+keybind = super+comma=reload_config
 
 # Themes
 # Catpuccin is built in
