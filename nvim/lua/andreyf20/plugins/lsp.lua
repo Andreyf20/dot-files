@@ -2,8 +2,8 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     -- Easy LSP installation
-    { "williamboman/mason.nvim" },
-    { "williamboman/mason-lspconfig.nvim" },
+    { "mason-org/mason.nvim" },
+    { "mason-org/mason-lspconfig.nvim" },
     -- Folke LuaLS config
     {
       "folke/lazydev.nvim",
