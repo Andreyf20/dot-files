@@ -66,36 +66,26 @@ return {
 	config = function()
 		-- Easy LSP installation
 		require("mason").setup({})
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
-		local servers = {
-			lua_ls = {},
-			-- Javascript, Typescript
-			-- ts_ls = {},
-			-- cssls = {},
-			-- Rust
-			-- rust_analyzer = {},
-			-- Python
-			-- pyright = {},
-			-- Golang
-			-- gopls = {},
-			-- C#
-			-- csharp_ls = {},
-		}
-		local ensure_installed = vim.tbl_keys(servers)
 		require("mason-lspconfig").setup({
-			ensure_installed = ensure_installed,
-			handlers = {
-				function(server_name)
-					local server = servers[server_name] or {}
-					-- This handles overriding only values explicitly passed
-					-- by the server configuration above. Useful when disabling
-					-- certain features of an LSP (for example, turning off formatting for ts_ls)
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					-- Setup LSPs
-					require("lspconfig")[server_name].setup(server)
-				end,
+			ensure_installed = {
+				"lua_ls",
+				-- Javascript, Typescript
+				-- "ts_ls",
+				-- "cssls",
+				-- Rust
+				-- "rust_analyzer",
+				-- Python
+				-- "pyright",
+				-- Golang
+				-- "gopls",
+				-- C#
+				-- "csharp_ls",
 			},
 		})
+
+		-- Some LSPs require manual enabling for some reason?
+		-- local lspconfig = require("lspconfig")
+		-- lspconfig.ts_ls.setup({}) -- Enable here or won't work for single files????
 
 		-- No idea how this got disabled, but it enables back the inline err/war messages
 		vim.diagnostic.enable = true

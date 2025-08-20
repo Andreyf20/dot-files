@@ -34,7 +34,7 @@ Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plug
 - prettierd
 - goimports-reviser <!-- Golang -->
 - gofumpt
-- golines
+- golines <!-- This one might be deprecated (?) -->
 - csharpier <!-- C# -->
 
 ### When adding new language need to change

@@ -7,7 +7,7 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				-- -- Typesript Javascript
+				-- Typesript Javascript
 				-- Use a sub-list to run only the first available formatter
 				-- javascript = { "prettierd" },
 				-- typescript = { "prettierd" },
@@ -16,15 +16,15 @@ return {
 				-- css = { "prettierd" },
 				-- yaml = { "prettierd" },
 				-- xml = { "prettierd" },
-				-- -- Rust
+				-- Rust
 				-- rust = { "rustfmt" },
-				-- -- Python
+				-- Python
 				-- python = { "black" },
-				-- -- Go
+				-- Go
 				-- go = { "gofumpt" },
-				-- -- C#
+				-- C#
 				-- cs = { "csharpier" },
-				-- -- Swift
+				-- Swift
 				-- swift = { "swiftformat" },
 			},
 			format_on_save = {
