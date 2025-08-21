@@ -46,7 +46,9 @@ return {
 					documentation = { auto_show = false },
 					list = { selection = { preselect = false, auto_insert = false } },
 					menu = {
+						border = "rounded",
 						draw = {
+							gap = 2,
 							columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind", gap = 1 } },
 						},
 					},
