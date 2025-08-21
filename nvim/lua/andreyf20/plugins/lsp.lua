@@ -45,6 +45,11 @@ return {
 				completion = {
 					documentation = { auto_show = false },
 					list = { selection = { preselect = false, auto_insert = false } },
+					menu = {
+						draw = {
+							columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind", gap = 1 } },
+						},
+					},
 				},
 
 				-- Default list of enabled providers defined so that you can extend it
