@@ -70,7 +70,7 @@ echo 'Finished setting up lazygit config'
 # Fastfetch conf
 echo 'Setting up Fastfetch config'
 mkdir ~/.config/fastfetch/
-cp ./Fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+cp ./fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 echo 'Finished setting up Fastfetch config'
 
 # Optional confs
