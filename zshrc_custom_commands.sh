@@ -55,17 +55,33 @@ echo 'Finished setting up nvim config'
 echo 'Setting up lazygit config'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Linux
-  mkdir ~/.config/lazygit/ &&
+  mkdir ~/.config/lazygit/
   cp ./lazygit/config.yml ~/.config/lazygit/config.yml
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
-  mkdir ~/Library/Application\ Support/lazygit/ &&
+  mkdir ~/Library/Application\ Support/lazygit/
   cp ./lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
 else
   # Unknown.
   echo 'Error: Unknown OS, cannot set lazygit config do it manually'
 fi
 echo 'Finished setting up lazygit config'
+
+# Ghostty conf, the linux dir and the macos dir is different
+echo 'Setting up ghostty config'
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # Linux
+  mkdir ~/.config/ghostty/
+  cp ./Ghostty/config ~/.config/ghostty/config
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Mac OSX
+  mkdir ~/Library/Application\ Support/com.mitchellh.ghostty/
+  cp ./Ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+else
+  # Unknown.
+  echo 'Error: Unknown OS, cannot set ghostty config do it manually'
+fi
+echo 'Finished setting up ghostty config'
 
 # Fastfetch conf
 echo 'Setting up Fastfetch config'
