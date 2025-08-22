@@ -18,6 +18,7 @@ return {
 				-- xml = { "prettierd" },
 				-- Rust
 				-- rust = { "rustfmt" },
+				-- toml = { "taplo" },
 				-- Python
 				-- python = { "black" },
 				-- Go
