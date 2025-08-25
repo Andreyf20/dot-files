@@ -15,15 +15,13 @@ You can use the kanata_gui.exe to get a tray icon running the program.
 Also you can create a shortcut to the executable and add it to your startup folder.
 
 ## MacOS
-Extremely painful to setup, it didn't work using alternative karabiner-elements. 
+Extremely painful to setup, initially worked but never got the launchd service to start. Use alternative karabiner-elements which was required anyway because of the karabiner driver. 
 
 <!-- Part of the tutorial [here](https://github.com/jtroo/kanata/discussions/1537) and [here](https://github.com/jtroo/kanata/issues/1264#issuecomment-2763085239). -->
 
 <!-- 1. Install the full karabiner-elements `$ brew install --cask karabiner-elements` (kanata uses the virtualhid driver). -->
 <!-- 1. Open karabiner-eventviewer and give permisison, open karabiner-elements, give permisison and follow the tutorial. -->
 <!-- 1. Make sure to completely close out of karabiner-elements app and exit the system tray icon too. -->
-<!-- 1. Install the [karabiner driver](https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/tree/main/dist). -->
-<!-- 1. Run `$ sudo /Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate` to enable the driver. -->
 <!-- 1. Next steps were not tested but don't hurt i guess: -->
 <!-- 1. MacOS settings -> Privacy and Security -> Input Monitoring -> Add Terminal and Kanata (shift+cmd+g -> /opt/homebrew/bin/kanata). -->
 <!-- 1. MacOS settings -> Privacy and Security -> Accessibility -> Add Terminal and Kanata (shift+cmd+g -> /opt/homebrew/bin/kanata). -->
