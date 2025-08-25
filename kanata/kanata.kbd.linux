@@ -1,0 +1,29 @@
+(defcfg process-unmapped-keys yes)
+
+(defsrc
+  caps a s d f j k l ;)
+
+(defalias
+  caps-mod (multi f24 (tap-hold 200 200 esc esc))
+  a-mod (multi f24 (tap-hold 200 200 a lmet))
+  s-mod (multi f24 (tap-hold 200 200 s lalt))
+  d-mod (multi f24 (tap-hold 200 200 d lsft))
+  f-mod (multi f24 (tap-hold 200 200 f lctl))
+  j-mod (multi f24 (tap-hold 200 200 j rctl))
+  k-mod (multi f24 (tap-hold 200 200 k rsft))
+  l-mod (multi f24 (tap-hold 200 200 l ralt))
+  ;-mod (multi f24 (tap-hold 200 200 ; rmet))
+)
+
+(deflayer base
+  @caps-mod
+  @a-mod
+  @s-mod
+  @d-mod
+  @f-mod
+  @j-mod
+  @k-mod
+  @l-mod
+  @;-mod
+)
+
