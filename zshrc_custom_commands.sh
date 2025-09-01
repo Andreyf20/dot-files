@@ -23,6 +23,7 @@ echo 'alias lg="lazygit"' >> ~/.zshrc
 echo 'alias ff="clear && fastfetch"' >> ~/.zshrc
 # Setup fzf to work with zsh command history ctrl+r
 echo -e '\n' >> ~/.zshrc
+echo '# Press ctrl+r to search in history' >> ~/.zshrc
 echo 'source <(fzf --zsh)' >> ~/.zshrc
 echo 'HISTFILE=~/.zsh_history' >> ~/.zshrc
 echo 'HISTSIZE=10000' >> ~/.zshrc
