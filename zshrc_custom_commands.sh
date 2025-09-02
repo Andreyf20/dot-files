@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Git dir, change accordingly
 echo 'Setting up zshrc config'
