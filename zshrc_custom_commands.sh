@@ -57,11 +57,11 @@ echo 'Setting up lazygit config'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Linux
   mkdir ~/.config/lazygit/
-  cp ./lazygit/config.yml ~/.config/lazygit/config.yml
+  cp ./Lazygit/config.yml ~/.config/lazygit/config.yml
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   mkdir ~/Library/Application\ Support/lazygit/
-  cp ./lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
+  cp ./Lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
 else
   # Unknown.
   echo 'Error: Unknown OS, cannot set lazygit config do it manually'
