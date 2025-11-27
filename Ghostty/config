@@ -16,4 +16,4 @@ keybind = super+comma=reload_config
 
 # Themes
 # Catpuccin is built in
-theme = catppuccin-macchiato
+theme = Catppuccin Macchiato
