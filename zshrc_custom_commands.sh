@@ -98,6 +98,12 @@ if [[ $1 == "optionalconfs" ]]; then
 	cp -r ./MangoHud ~/.config/MangoHud/ &&
 	rm ~/.config/MangoHud/README.md
 	echo 'Finished setting up MangoHud config'
+	# Rofi conf
+	echo 'Setting up Rofi config'
+  mkdir ~/.config/rofi/ &&
+	cp -r ./rofi/* ~/.config/rofi/
+	echo 'Finished setting up Rofi config'
+  echo 'Finished setting up optional confs'
 else
   echo 'No optional confs'
 fi
