@@ -1,0 +1,34 @@
+{
+  "bar.customModules.storage.paths": ["/"],
+  "theme.bar.floating": true,
+  "theme.bar.transparent": false,
+  "bar.clock.format": "%Y-%m-%d %R",
+  "menus.clock.weather.enabled": false,
+  "menus.clock.time.military": true,
+  "menus.dashboard.stats.enabled": false,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "",
+  "menus.dashboard.shortcuts.left.shortcut3.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "",
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "",
+  "menus.dashboard.shortcuts.left.shortcut4.tooltip": "",
+  "menus.dashboard.shortcuts.left.shortcut4.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "",
+  "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Search Apps",
+  "menus.dashboard.shortcuts.right.shortcut1.command": "rofi -show drun",
+  "menus.dashboard.shortcuts.right.shortcut1.icon": "",
+  "bar.workspaces.workspaces": 5,
+  "bar.workspaces.show_numbered": true,
+  "bar.layouts": {
+    "*": {
+      "left": ["dashboard", "workspaces", "windowtitle"],
+      "middle": ["clock"],
+      "right": ["systray", "volume", "network", "bluetooth", "notifications"]
+    }
+  }
+}
+
