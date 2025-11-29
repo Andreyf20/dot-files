@@ -21,6 +21,8 @@ echo 'alias cat="bat"' >> ~/.zshrc # Remember to install bat
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
 echo 'alias lg="lazygit"' >> ~/.zshrc
 echo 'alias ff="clear && fastfetch"' >> ~/.zshrc
+echo 'alias change_wallpaper="python ~/.config/hypr/scripts/change_wallpaper.py"' >> ~/.zshrc
+echo '# My Custom Commands end' >> ~/.zshrc
 # Setup fzf to work with zsh command history ctrl+r
 echo -e '\n' >> ~/.zshrc
 echo '# Press ctrl+r to search in history' >> ~/.zshrc
@@ -29,7 +31,6 @@ echo 'HISTFILE=~/.zsh_history' >> ~/.zshrc
 echo 'HISTSIZE=10000' >> ~/.zshrc
 echo 'SAVEHIST=10000' >> ~/.zshrc
 echo 'setopt appendhistory' >> ~/.zshrc
-echo '# My Custom Commands end' >> ~/.zshrc
 echo -e '\n' >> ~/.zshrc
 # Setup go path
 echo 'export GOPATH="$HOME/go"' >> ~/.zshrc
