@@ -1,7 +1,7 @@
 {
   "bar.customModules.storage.paths": ["/"],
   "theme.bar.floating": true,
-  "theme.bar.transparent": false,
+  "theme.bar.transparent": true,
   "bar.clock.format": "%Y-%m-%d %R",
   "menus.clock.weather.enabled": false,
   "menus.clock.time.military": true,
