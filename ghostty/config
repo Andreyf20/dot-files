@@ -8,8 +8,8 @@ font-feature = -dlig
 
 # Window confs
 window-decoration = false
-background-opacity = 0.86
-background-blur-radius = 10
+background-opacity = 0.90
+# background-blur-radius = 10
 
 # Keybind confs
 keybind = super+comma=reload_config
