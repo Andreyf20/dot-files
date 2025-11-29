@@ -9,6 +9,7 @@ NOT FINISHED! Still a wip.
 - [hyprpaper](https://github.com/hyprwm/hyprpaper): `$ sudo pacman -S hyprpaper`
 - [grimblast](https://github.com/hyprwm/contrib): `$ yay -S grimblast-git`
 - [xdg-hyprland-portal](https://github.com/hyprwm/xdg-desktop-portal-hyprland): `$ yay xdg-desktop-portal-hyprland`
+- [lxappearance](https://github.com/lxde/lxappearance): `$ yay lxappearance` or `$ yay nwg-look`
 
 
 
