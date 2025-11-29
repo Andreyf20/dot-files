@@ -57,11 +57,11 @@ echo 'Setting up lazygit config'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Linux
   mkdir ~/.config/lazygit/
-  cp ./Lazygit/config.yml ~/.config/lazygit/config.yml
+  cp ./lazygit/config.yml ~/.config/lazygit/config.yml
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   mkdir ~/Library/Application\ Support/lazygit/
-  cp ./Lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
+  cp ./lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
 else
   # Unknown.
   echo 'Error: Unknown OS, cannot set lazygit config do it manually'
@@ -73,11 +73,11 @@ echo 'Setting up ghostty config'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Linux
   mkdir ~/.config/ghostty/
-  cp ./Ghostty/config ~/.config/ghostty/config
+  cp ./ghostty/config ~/.config/ghostty/config
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   mkdir ~/Library/Application\ Support/com.mitchellh.ghostty/
-  cp ./Ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+  cp ./ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 else
   # Unknown.
   echo 'Error: Unknown OS, cannot set ghostty config do it manually'
