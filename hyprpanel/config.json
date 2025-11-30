@@ -27,7 +27,14 @@
     "*": {
       "left": ["dashboard", "workspaces", "windowtitle"],
       "middle": ["clock"],
-      "right": ["systray", "volume", "network", "bluetooth", "notifications"]
+      "right": [
+        "systray",
+        "volume",
+        "microphone",
+        "network",
+        "bluetooth",
+        "notifications"
+      ]
     }
   }
 }
