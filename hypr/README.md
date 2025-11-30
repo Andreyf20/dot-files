@@ -1,5 +1,5 @@
-[!WARNING]
-NOT FINISHED! Still a wip.
+> [!WARNING]
+> NOT FINISHED! Still a wip.
 
 # Hyprland
 
