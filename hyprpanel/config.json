@@ -1,8 +1,9 @@
 {
+  "bar.clock.format": "%Y-%m-%d %R",
   "bar.customModules.storage.paths": ["/"],
   "theme.bar.floating": true,
   "theme.bar.transparent": true,
-  "bar.clock.format": "%Y-%m-%d %R",
+  "theme.font.size": "1.0rem",
   "menus.clock.weather.enabled": false,
   "menus.clock.time.military": true,
   "menus.dashboard.stats.enabled": false,
@@ -21,7 +22,6 @@
   "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Search Apps",
   "menus.dashboard.shortcuts.right.shortcut1.command": "rofi -show drun",
   "menus.dashboard.shortcuts.right.shortcut1.icon": "",
-  "bar.workspaces.workspaces": 5,
   "bar.workspaces.show_numbered": true,
   "bar.layouts": {
     "*": {
