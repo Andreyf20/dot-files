@@ -7,6 +7,7 @@ font-feature = -liga
 font-feature = -dlig
 
 # Window confs
+confirm-close-surface = false
 window-decoration = false
 background-opacity = 0.90
 # background-blur-radius = 10
