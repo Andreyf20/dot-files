@@ -11,8 +11,7 @@
   "logo": {
     "type": "kitty-direct",
     "source": "~/.config/fastfetch/images/lain.png",
-    "width": 40,
-    "height": 15,
+    "width": 35,
     "padding": {
       "top": 2,
       "left": 2,
