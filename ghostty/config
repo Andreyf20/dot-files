@@ -7,13 +7,29 @@ font-feature = -liga
 font-feature = -dlig
 
 # Window confs
+window-new-tab-position = end
 confirm-close-surface = false
 window-decoration = false
 background-opacity = 0.90
 # background-blur-radius = 10
+gtk-tabs-location = bottom
 
 # Keybind confs
 keybind = super+comma=reload_config
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+keybind = ctrl+4=goto_tab:4
+keybind = ctrl+5=goto_tab:5
+keybind = ctrl+6=goto_tab:6
+keybind = ctrl+t=new_tab
+keybind = ctrl+w=close_tab:this
+
+# Cursor confs
+# Disable the cursor shell integration to change the style
+shell-integration-features = no-cursor 
+cursor-style = block
+cursor-style-blink = false
 
 # Themes
 # Catpuccin is built in
