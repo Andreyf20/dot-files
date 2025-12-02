@@ -37,6 +37,7 @@ echo 'export GOPATH="$HOME/go"' >> ~/.zshrc
 echo 'export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin' >> ~/.zshrc
 # Setup dotnet path
 echo 'export PATH="$PATH:$HOME/.dotnet/tools"' >> ~/.zshrc
+echo 'export EDITOR=nvim' >> ~/.zshrc
 echo 'Finished setting up zshrc config'
 
 # Tmux conf
