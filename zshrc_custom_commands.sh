@@ -21,6 +21,7 @@ echo 'alias cat="bat"' >> ~/.zshrc # Remember to install bat
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
 echo 'alias lg="lazygit"' >> ~/.zshrc
 echo 'alias ls="eza -lir"' >> ~/.zshrc
+echo 'alias cd="z"' >> ~/.zshrc
 echo 'alias ff="clear && fastfetch"' >> ~/.zshrc
 echo 'alias change_wallpaper="python ~/.config/hypr/scripts/change_wallpaper.py"' >> ~/.zshrc
 echo '# My Custom Commands end' >> ~/.zshrc
@@ -39,6 +40,7 @@ echo 'export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin' >> ~/.zshrc
 # Setup dotnet path
 echo 'export PATH="$PATH:$HOME/.dotnet/tools"' >> ~/.zshrc
 echo 'export EDITOR=nvim' >> ~/.zshrc
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 echo 'Finished setting up zshrc config'
 
 # Tmux conf
