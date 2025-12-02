@@ -9,6 +9,7 @@ font-feature = -dlig
 # Window confs
 window-new-tab-position = end
 confirm-close-surface = false
+# For macOS need to enable the decorations for the tabs to work
 window-decoration = false
 background-opacity = 0.90
 # background-blur-radius = 10

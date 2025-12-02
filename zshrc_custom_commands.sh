@@ -75,11 +75,13 @@ echo 'Setting up ghostty config'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Linux
   mkdir ~/.config/ghostty/
-  cp ./ghostty/config ~/.config/ghostty/config
+  cp -r ./ghostty/* ~/.config/ghostty/
+  rm ~/.config/ghostty/README.md
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   mkdir ~/Library/Application\ Support/com.mitchellh.ghostty/
-  cp ./ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+  cp -r ./ghostty/* ~/Library/Application\ Support/com.mitchellh.ghostty/
+  rm ~/Library/Application\ Support/com.mitchellh.ghostty/README.md
 else
   # Unknown.
   echo 'Error: Unknown OS, cannot set ghostty config do it manually'
@@ -89,7 +91,8 @@ echo 'Finished setting up ghostty config'
 # Fastfetch conf
 echo 'Setting up Fastfetch config'
 mkdir ~/.config/fastfetch/
-cp ./fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+cp -r ./fastfetch/* ~/.config/fastfetch/
+rm ~/.config/fastfetch/README.md
 echo 'Finished setting up Fastfetch config'
 
 # Optional confs
