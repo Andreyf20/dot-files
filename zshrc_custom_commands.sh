@@ -20,6 +20,7 @@ echo 'alias fzfd="cd && find . -type d -print | fzf | xargs -r nvim"' >> ~/.zshr
 echo 'alias cat="bat"' >> ~/.zshrc # Remember to install bat
 echo 'alias tmux="tmux -u"' >> ~/.zshrc
 echo 'alias lg="lazygit"' >> ~/.zshrc
+echo 'alias ls="eza -lir"' >> ~/.zshrc
 echo 'alias ff="clear && fastfetch"' >> ~/.zshrc
 echo 'alias change_wallpaper="python ~/.config/hypr/scripts/change_wallpaper.py"' >> ~/.zshrc
 echo '# My Custom Commands end' >> ~/.zshrc
