@@ -1,6 +1,10 @@
 {
   "bar.clock.format": "%Y-%m-%d %R",
   "bar.customModules.storage.paths": ["/"],
+  "bar.customModules.microphone.leftClick": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle\n",
+  "bar.customModules.microphone.rightClick": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle\n",
+  "bar.customModules.microphone.middleClick": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle\n",
+  "bar.workspaces.show_numbered": true,
   "theme.bar.floating": true,
   "theme.bar.transparent": true,
   "theme.bar.menus.buttons.radius": "1.0em",
@@ -25,7 +29,6 @@
   "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Search Apps",
   "menus.dashboard.shortcuts.right.shortcut1.command": "rofi -show drun",
   "menus.dashboard.shortcuts.right.shortcut1.icon": "",
-  "bar.workspaces.show_numbered": true,
   "bar.layouts": {
     "*": {
       "left": ["dashboard", "workspaces", "windowtitle"],
