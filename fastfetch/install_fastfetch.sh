@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set current dir to script dir
+cd "$(dirname "$0")"
+
 echo 'Setting up MangoHud config'
 mkdir ~/.config/fastfetch/
 cp -r ./* ~/.config/fastfetch/

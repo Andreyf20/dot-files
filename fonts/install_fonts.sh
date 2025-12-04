@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set current dir to script dir
+cd "$(dirname "$0")"
+
 echo 'Setting up fonts'
 mkdir ~/.local/share/fonts/
 cp -r ./* ~/.local/share/fonts/

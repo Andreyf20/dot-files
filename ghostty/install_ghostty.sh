@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set current dir to script dir
+cd "$(dirname "$0")"
+
 # Ghostty conf, the linux dir and the macos dir is different
 echo 'Setting up ghostty config'
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then

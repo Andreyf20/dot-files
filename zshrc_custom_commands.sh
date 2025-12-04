@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set current dir to script dir
+cd "$(dirname "$0")"
+
 # Git dir, change accordingly
 echo 'Setting up zshrc config'
 echo -e '\n' >> ~/.zshrc
