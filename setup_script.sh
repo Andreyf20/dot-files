@@ -1,10 +1,23 @@
 #!/usr/bin/env bash
 
-mkdir ~/.config
+mkdir ~/.config &> /dev/null
 
 # zshrc config
-./zshrc_custom_commands.sh
-echo -e '\n'
+echo 'zsh config? y/N'
+read confirm
+if [[ $confirm == "y" ]]; then
+  ./zshrc_custom_commands.sh
+  echo -e '\n'
+fi
+
+# fish config
+echo 'fish config? y/N'
+read confirm
+if [[ $confirm == "y" ]]; then
+  chmod +x ./fish/install_fish.sh
+  ./fish/install_fish.sh
+  echo -e '\n'
+fi
 
 # tmux config
 # Make sure to run prefix + I to install plugins
