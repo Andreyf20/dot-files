@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # zshrc config
-./zshrc/install_zshrc.sh
+./zshrc_custom_commands.sh
 
 # tmux config
 # Make sure to run prefix + I to install plugins
