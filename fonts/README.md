@@ -1,10 +1,9 @@
 Fonts so i can stop losing them.
 
 ## Linux
+
 Variables:
 andrey -> username
-
-`$ cp -r ./* ~/.local/share/fonts/ && fc-cache reload && fc-list | grep andrey`
 
 ## Rest of OSs
 
