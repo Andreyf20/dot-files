@@ -8,12 +8,13 @@ echo 'Setting up zshrc config'
 echo -e '\n' >> ~/.zshrc
 echo '# My Custom Commands' >> ~/.zshrc
 # Open neovim
+echo 'alias n="nvim ."' >> ~/.zshrc
 echo 'alias nzsh="nvim ~/.zshrc"' >> ~/.zshrc
 echo 'alias nconfig="nvim ~/.config/nvim"' >> ~/.zshrc
 echo 'alias n.config="nvim ~/.config/"' >> ~/.zshrc
 # Other extra commands
 echo 'alias cat="bat"' >> ~/.zshrc # Remember to install bat
-echo 'alias tmux="tmux -u"' >> ~/.zshrc
+echo 'alias tx="tmux -u"' >> ~/.zshrc
 echo 'alias lg="lazygit"' >> ~/.zshrc
 echo 'alias ls="eza -lir"' >> ~/.zshrc
 echo 'alias cd="z"' >> ~/.zshrc
