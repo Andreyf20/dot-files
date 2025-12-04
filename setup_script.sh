@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir ~/.config
+
 # zshrc config
 ./zshrc_custom_commands.sh
 echo '\n'
