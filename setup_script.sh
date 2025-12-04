@@ -51,3 +51,19 @@ if [[ $confirm == "y" ]]; then
   ./rofi/install_rofi.sh
 fi
 echo '\n'
+
+# Hyprland config
+echo 'hyprland config? y/N'
+read confirm
+if [[ $confirm == "y" ]]; then
+  chmod +x ./hypr/install_hypr.sh
+  ./hypr/install_hypr.sh
+  chmod +x ./hyprpanel/install_hyprpanel.sh
+  ./hyprpanel/install_hyprpanel.sh
+fi
+echo '\n'
+
+# zed config
+chmod +x ./zed/install_zed.sh
+./zed/install_zed.sh
+
