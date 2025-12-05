@@ -8,4 +8,5 @@ mkdir ~/.config/hypr/
 cp -r ./* ~/.config/hypr/
 rm ~/.config/hypr/README.md
 rm ~/.config/hypr/install_hypr.sh
+rm ~/.config/hypr/set_file_manager.sh
 echo 'Finished setting up hypr config'
