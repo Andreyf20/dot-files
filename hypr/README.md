@@ -11,7 +11,8 @@
 - [satty](https://github.com/Satty-org/Satty): `$ yay satty`
 - [xdg-hyprland-portal](https://github.com/hyprwm/xdg-desktop-portal-hyprland): `$ yay xdg-desktop-portal-hyprland`
 - [lxappearance](https://github.com/lxde/lxappearance): `$ yay lxappearance` or `$ yay nwg-look`
-- [hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent): `$ yay hyprpolkitagent`
+- [Theming qt applications](): `$ sudo pacman -S gt6ct kvantum qt6-wayland qt5-wayland`
+- [hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent): `$ yay hyprpolkitagent` - Might need the gnomepolkit or kdepolkit for some apps
 
 ## Disclaimer
 
