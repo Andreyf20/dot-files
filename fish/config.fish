@@ -17,6 +17,18 @@ if test -d ~/.local/bin
     end
 end
 
+if test -d /opt/homebrew/bin
+    if not contains -- /opt/homebrew/bin $PATH
+        set -p PATH /opt/homebrew/bin
+    end
+end
+
+if test -d /opt/homebrew/opt/rustup/bin
+    if not contains -- /opt/homebrew/opt/rustup/bin $PATH
+        set -p PATH /opt/homebrew/opt/rustup/bin
+    end
+end
+
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 # Functions stolen from default CachyOS config, /usr/share/cachyos-fish-config/
 function __history_previous_command

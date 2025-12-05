@@ -7,3 +7,9 @@ glaze-wm/errors.log
 
 # Ignore .DS_Store files for MacOs
 .DS_Store
+
+# Fish shell stuff
+fish_variables
+fish/functions/
+fish/completions/
+fish/conf.d/
