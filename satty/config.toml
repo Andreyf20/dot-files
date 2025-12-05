@@ -1,0 +1,2 @@
+[general]
+actions-on-enter = ["save-to-clipboard", "exit"]

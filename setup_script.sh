@@ -75,6 +75,8 @@ if [[ $confirm == "y" ]]; then
   ./hypr/install_hypr.sh
   chmod +x ./hyprpanel/install_hyprpanel.sh
   ./hyprpanel/install_hyprpanel.sh
+  chmod +x ./satty/install_satty.sh
+  ./satty/install_satty.sh
 fi
 echo -e '\n'
 
