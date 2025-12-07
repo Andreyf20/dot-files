@@ -8,9 +8,20 @@ if not os.path.isfile(path):
     print(f"File does not exist, check the path {path}")
     exit(1)
 
-monitor = "DP-3" if len(argv) < 3 else argv[2]
-
-call(["hyprctl", "hyprpaper", "preload", f"{path}"])
-result = call(["hyprctl", "hyprpaper", "wallpaper", f"{monitor},{path}"])
+# Example of awww usage:
+# awww img <path> --transition-type grow --transition-duration 1 --transition-fps 60
+result = call(
+    [
+        "awww",
+        "img",
+        f"{path}",
+        "--transition-type",
+        "grow",
+        "--transition-duration",
+        "1.0",
+        "--transition-fps",
+        "60",
+    ]
+)
 
 print(result)

@@ -6,7 +6,7 @@
 ## Programs needed for the setup
 
 - [hyprpanel](https://github.com/Jas-SinghFSU/HyprPanel): `$ yay -S ags-hyprpanel-git`
-- [hyprpaper](https://github.com/hyprwm/hyprpaper): `$ sudo pacman -S hyprpaper`
+- [awww](https://codeberg.org/LGFae/awww): `$ yay awww`
 - [grimblast](https://github.com/hyprwm/contrib): `$ yay -S grimblast-git`
 - [satty](https://github.com/Satty-org/Satty): `$ yay satty`
 - [xdg-hyprland-portal](https://github.com/hyprwm/xdg-desktop-portal-hyprland): `$ yay xdg-desktop-portal-hyprland`
