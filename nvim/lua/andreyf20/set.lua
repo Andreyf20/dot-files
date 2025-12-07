@@ -6,11 +6,11 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 -- vim.opt.cursorline = true
 
-vim.opt.tabstop = 2
--- vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.opt.tabstop = 4        -- Equivalent number of spaces a <Tab> in the file counts for
+vim.opt.softtabstop = 4    -- Spaces added when pressing <Tab>
+vim.opt.shiftwidth = 4     -- Amount of spaces to use for indentation
+vim.opt.expandtab = true   -- Insert spaces when <Tab> is pressed
+vim.opt.smartindent = true -- Auto indent when starting a new line
 
 vim.opt.wrap = false
 
