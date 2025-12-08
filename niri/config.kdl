@@ -357,3 +357,13 @@ workspace "2" {}
 workspace "3" {}
 workspace "4" {}
 // workspace "5" {}
+
+environment {
+    XDG_SESSION_TYPE "wayland"
+    XCURSOR_SIZE "32"
+    XCURSOR_THEME "Apple-cursors"
+    GTK_THEME "catppuccin-macchiato-lavender-standard+default"
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_STYLE_OVERRIDE "kvantum"
+}
