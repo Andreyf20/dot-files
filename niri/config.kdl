@@ -233,6 +233,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Super+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Super+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
+    Super+E hotkey-overlay-title="Open a File Manager: nautilus" { spawn "nautilus"; }
+    Super+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-browser"; }
 
     // Screenshot with grimblast and satty
     Print hotkey-overlay-title="Screenshot with grimblast and edit with satty" { spawn-sh "grimblast save area - | satty --filename - --copy-command 'wl-copy'"; }
