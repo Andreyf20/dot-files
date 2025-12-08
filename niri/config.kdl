@@ -240,7 +240,8 @@ binds {
     // Screenshot with grimblast and satty
     Print hotkey-overlay-title="Screenshot with grimblast and edit with satty" { spawn-sh "grimblast save area - | satty --filename - --copy-command 'wl-copy'"; }
 
-    Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    // Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    Pause { spawn-sh "dms ipc call audio micmute"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -355,4 +356,4 @@ workspace "1" {}
 workspace "2" {}
 workspace "3" {}
 workspace "4" {}
-workspace "5" {}
+// workspace "5" {}
