@@ -1,21 +1,13 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  // Using kitty-direct/kitty does not work with tmux use this one instead is using tmux
-  // Using kitty-icat works though, needs kitten to be installed
-  // "logo": {
-  //   "source": "builtin",
-  //   "padding": {
-  //     "top": 0,
-  //     "left": 1,
-  //   },
-  // },
   "logo": {
-    "type": "kitty-icat",
-    "source": "~/.config/fastfetch/images/lain.png",
-    "width": 35,
+    "type": "file",
+    "source": "~/.config/fastfetch/images/lain.txt",
     "padding": {
-      "top": 2,
       "left": 2,
+    },
+    "color": {
+      "1": "blue",
     },
   },
   "display": {
