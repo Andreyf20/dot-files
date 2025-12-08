@@ -56,6 +56,13 @@ input {
     focus-follows-mouse max-scroll-amount="95%"
 }
 
+// Disable the hot corners.
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -141,7 +148,8 @@ layout {
 // which may be more convenient to use.
 // spawn-at-startup "waybar"
 spawn-at-startup "awww-daemon"
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+// spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
