@@ -1,6 +1,3 @@
-> [!WARNING]
-> NOT FINISHED! Still a wip.
-
 # Hyprland
 
 ## Programs needed for the setup
