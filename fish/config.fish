@@ -68,7 +68,7 @@ abbr --add lg lazygit
 abbr --add tx tmux -u
 
 # My aliases
-alias ls="eza -l --sort type"
+alias ls="eza -l --sort type --icons"
 alias cd="z"
 alias cat="bat"
 alias ff="clear && fastfetch"
