@@ -6,6 +6,7 @@
 - [awww](https://codeberg.org/LGFae/awww): `$ yay awww`
 - [grimblast](https://github.com/hyprwm/contrib): `$ yay -S grimblast-git`
 - [satty](https://github.com/Satty-org/Satty): `$ yay satty`
+- [Rofi](https://github.com/davatorium/rofi): `$ yay rofi`
 - [xdg-hyprland-portal](https://github.com/hyprwm/xdg-desktop-portal-hyprland): `$ yay xdg-desktop-portal-hyprland`
 - [lxappearance](https://github.com/lxde/lxappearance): `$ yay lxappearance` or `$ yay nwg-look`
 - [Theming qt applications](): `$ sudo pacman -S gt6ct kvantum qt6-wayland qt5-wayland`
