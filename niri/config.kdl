@@ -50,7 +50,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    warp-mouse-to-focus
+    // warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     focus-follows-mouse max-scroll-amount="95%"
@@ -256,6 +256,7 @@ binds {
 
     // Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     Pause { spawn-sh "dms ipc call audio micmute"; }
+    Shift+Pause { spawn-sh "dms ipc call audio mute"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -284,6 +285,9 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Alt+F1 repeat=false { toggle-overview; }
     Super+Q repeat=false { close-window; }
+
+    Super+WheelScrollDown cooldown-ms=150 { focus-column-right; }
+    Super+WheelScrollUp   cooldown-ms=150 { focus-column-left; }
 
     Alt+H     { focus-column-left; }
     Alt+J     { focus-window-down; }
