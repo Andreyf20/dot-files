@@ -82,3 +82,22 @@ if [[ $confirm == "y" ]]; then
 fi
 echo -e '\n'
 
+# Niri config
+echo 'niri config? y/N'
+read confirm
+if [[ $confirm == "y" ]]; then
+  chmod +x ./niri/install_niri.sh
+  ./niri/install_niri.sh
+  chmod +x ./satty/install_satty.sh
+  ./satty/install_satty.sh
+fi
+echo -e '\n'
+
+# Personal scripts config
+echo 'personal scripts config? y/N'
+read confirm
+if [[ $confirm == "y" ]]; then
+  chmod +x ./personal_scripts/install_ps.sh
+  ./personal_scripts/install_ps.sh
+fi
+echo -e '\n'
