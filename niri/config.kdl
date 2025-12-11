@@ -333,9 +333,9 @@ binds {
     Alt+Ctrl+6 { move-window-to-workspace 6; }
 
     // Consume one window from the right to the bottom of the focused column.
-    Alt+Slash { consume-window-into-column; }
+    Alt+Slash { consume-or-expel-window-left; }
     // Expel the bottom window from the focused column to the right.
-    Alt+Backslash { expel-window-from-column; }
+    Alt+Backslash { consume-or-expel-window-right; }
 
     Super+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
