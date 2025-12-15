@@ -23,8 +23,8 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        natural-scroll
-        // accel-speed 0.2
+        // natural-scroll
+        accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
@@ -204,6 +204,8 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    match app-id=r#"org\.telegram\.desktop$"# title="Media viewer"
     open-floating true
 }
 
