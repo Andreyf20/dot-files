@@ -346,6 +346,7 @@ binds {
     Super+Ctrl+R { reset-window-height; }
 
     Super+M { maximize-column; }
+    Super+N { maximize-window-to-edges; }
     Super+F { fullscreen-window; }
 
     Super+C { center-column; }
