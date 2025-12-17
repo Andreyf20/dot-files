@@ -18,9 +18,14 @@
             "ctrl-2": ["pane::ActivateItem", 1],
             "ctrl-3": ["pane::ActivateItem", 2],
             "ctrl-4": ["pane::ActivateItem", 3],
-            "ctrl-5": ["pane::ActivateItem", 4],
-            "shift+j": "editor::MoveLineDown",
-            "shift+k": "editor::MoveLineUp"
+            "ctrl-5": ["pane::ActivateItem", 4]
+        }
+    },
+    {
+        "context": "vim_mode == visual",
+        "bindings": {
+            "shift-j": "editor::MoveLineDown",
+            "shift-k": "editor::MoveLineUp"
         }
     },
     {
