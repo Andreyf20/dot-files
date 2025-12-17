@@ -1,0 +1,12 @@
+cursor {
+    xcursor-theme "Apple-cursors"
+    xcursor-size 32
+}
+
+environment {
+    XDG_SESSION_TYPE "wayland"
+    GTK_THEME "catppuccin-macchiato-lavender-standard+default"
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_STYLE_OVERRIDE "kvantum"
+}

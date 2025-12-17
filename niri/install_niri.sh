@@ -5,5 +5,7 @@ cd "$(dirname "$0")"
 
 echo 'Setting up niri config'
 mkdir ~/.config/niri/
-cp ./config.kdl ~/.config/niri/config.kdl
+cp -r ./* ~/.config/niri/
+rm ~/.config/niri/README.md
+rm ~/.config/niri/install_niri.sh
 echo 'Finished setting up niri config'
