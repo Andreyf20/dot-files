@@ -11,6 +11,7 @@ include "modules/gestures.kdl"
 include "modules/inputs.kdl"
 include "modules/layout.kdl"
 include "modules/outputs.kdl"
+include "modules/spawn_at_startup.kdl"
 include "modules/window_rules.kdl"
 include "modules/workspaces.kdl"
 

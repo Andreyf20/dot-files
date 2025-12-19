@@ -65,17 +65,3 @@ layout {
     }
 }
 
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// spawn-at-startup "waybar"
-spawn-at-startup "awww-daemon"
-// spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
-
-hotkey-overlay {
-    skip-at-startup
-}
