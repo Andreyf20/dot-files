@@ -78,6 +78,7 @@ binds {
     Alt+Shift+J   { focus-monitor-down; }
     Alt+Shift+K   { focus-monitor-up; }
     Alt+Shift+L   { focus-monitor-right; }
+    Super+Tab     { focus-monitor-next; }
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
