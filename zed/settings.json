@@ -16,6 +16,7 @@
         "metrics": false
     },
     "vim_mode": true,
+    "colorize_brackets": true,
     "theme": {
         "mode": "system",
         "light": "Catppuccin Macchiato",
