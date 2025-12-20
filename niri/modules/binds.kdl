@@ -25,8 +25,10 @@ binds {
     Shift+Print hotkey-overlay-title="Color picker" { spawn-sh "hyprpicker | wl-copy"; }
 
     // Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-    Pause { spawn-sh "dms ipc call audio micmute"; }
-    Shift+Pause { spawn-sh "dms ipc call audio mute"; }
+    // Pause { spawn-sh "dms ipc call audio micmute"; }
+    // Shift+Pause { spawn-sh "dms ipc call audio mute"; }
+    Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    Shift+Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.

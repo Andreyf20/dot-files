@@ -13,6 +13,6 @@ Check the [installation commands](https://yalter.github.io/niri/Getting-Started.
 - [grimblast](https://github.com/hyprwm/contrib): `$ yay -S grimblast-git`
 - [satty](https://github.com/Satty-org/Satty): `$ yay satty`
 - [Rofi](https://github.com/davatorium/rofi): `$ yay rofi`
-- [dms](https://github.com/AvengeMedia/DankMaterialShell): `$ yay dms-shell-bin`
+- [noctalia-shell](https://github.com/noctalia-dev/noctalia-shell): `$ yay -S noctalia-shell`
 - [hyprpicker](https://github.com/hyprwm/hyprpicker): `$ yay hyprpicker`
 - [polkit-gnome or plasma-polkit-agent](): `$ yay polkit-gnome`
