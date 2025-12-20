@@ -82,14 +82,14 @@ binds {
     Alt+Shift+L   { focus-monitor-right; }
     Super+Tab     { focus-monitor-next; }
 
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    Super+Page_Down      { focus-workspace-down; }
+    Super+Page_Up        { focus-workspace-up; }
+    Super+U              { focus-workspace-down; }
+    Super+I              { focus-workspace-up; }
+    Super+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Super+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Super+Ctrl+U         { move-column-to-workspace-down; }
+    Super+Ctrl+I         { move-column-to-workspace-up; }
 
     Alt+1 { focus-workspace 1; }
     Alt+2 { focus-workspace 2; }
@@ -137,7 +137,7 @@ binds {
 
     // The allow-inhibiting=false property can be applied to other binds as well,
     // which ensures niri always processes them, even when an inhibitor is active.
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Super+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Super+Shift+E { quit; }
