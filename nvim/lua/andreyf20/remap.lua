@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>")
 vim.keymap.set("n", "<leader>qw", "<cmd>wq<CR>")
 -- Quit without saving, change to qa! to force without warning
 vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- Do not care about case when searching
 vim.keymap.set("n", "/", "/\\c")
