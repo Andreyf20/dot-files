@@ -17,6 +17,12 @@ if test -d ~/.local/bin
     end
 end
 
+if test -d ~/.config/emacs/bin
+    if not contains -- ~/.config/emacs/bin $PATH
+        set -p PATH ~/.config/emacs/bin
+    end
+end
+
 if test -d /opt/homebrew/bin
     if not contains -- /opt/homebrew/bin $PATH
         set -p PATH /opt/homebrew/bin
@@ -73,6 +79,7 @@ alias cd="z"
 alias cat="bat"
 alias ff="clear && fastfetch"
 alias change_wallpaper="python ~/.config/personal_scripts/change_wallpaper.py"
+alias emacs="doom emacs"
 
 # Inits
 zoxide init fish | source
