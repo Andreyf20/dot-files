@@ -78,7 +78,7 @@ alias ls="eza -l --sort type --icons"
 alias cd="z"
 alias cat="bat"
 alias ff="clear && fastfetch"
-alias change_wallpaper="python ~/.config/personal_scripts/change_wallpaper.py"
+alias change_wallpaper="~/.config/personal_scripts/change_wallpaper.py"
 alias emacs="doom emacs"
 
 # Inits

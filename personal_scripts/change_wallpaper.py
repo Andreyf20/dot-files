@@ -1,8 +1,15 @@
+#!/usr/bin/env python3
+
 import os
 import random
 import re
 from subprocess import call
 from sys import argv
+
+if len(argv) < 2:
+    print("ERROR!")
+    print("Please provide a path to a picture")
+    exit(1)
 
 path = argv[1]
 if not os.path.isfile(path) and path != "random":
