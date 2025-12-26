@@ -1,155 +1,104 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "file",
-    "source": "~/.config/fastfetch/images/lain.txt",
+    "source": "~/.config/fastfetch/images/nyarch.png",
+    "type": "kitty",
+    "height": 14,
     "padding": {
+      "top": 1,
       "left": 2,
-    },
-    "color": {
-      "1": "blue",
     },
   },
   "display": {
-    "separator": "  ",
+    "separator": " > ",
+    "key": {
+      "type": "string",
+      "width": 12, // Align the modules text
+      "paddingLeft": 0,
+    },
   },
+
   "modules": [
     {
       "type": "title",
-      "key": "Host",
+      "key": "host   ",
       "keyColor": "blue",
     },
     "break",
     {
       "type": "os",
-      "key": "╭─",
+      "key": "os     ",
       "keyColor": "magenta",
+      "format": "{3}",
     },
     {
       "type": "kernel",
-      "key": "├─",
-      "format": "{1} {2}",
+      "key": "kernel ",
+      "format": "{2}",
       "keyColor": "magenta",
     },
     {
       "type": "packages",
-      "key": "├─󰮯",
+      "key": "pkgs   ",
       "keyColor": "magenta",
     },
     {
       "type": "de",
-      "key": "├─",
+      "key": "de     ",
       "keyColor": "magenta",
     },
     {
       "type": "wm",
-      "key": "├─",
+      "key": "wm     ",
       "keyColor": "magenta",
-    },
-    {
-      "type": "lm",
-      "key": "╰─󰧨",
-      "keyColor": "magenta",
+      "format": "{1}",
     },
     "break",
-    // One entry for every partition
-    // {
-    // 	"type": "brightness",
-    // 	"key": "├─󰃞",
-    // 	"keyColor": "green"
-    // },
-    // {
-    // 	"type": "battery",
-    // 	"key": "├─",
-    // 	"keyColor": "green"
-    // },
-    // {
-    // 	"type": "poweradapter",
-    // 	"key": "├─",
-    // 	"keyColor": "green"
-    // },
-    // {
-    // 	"type": "gamepad",
-    // 	"key": "├─",
-    // 	"keyColor": "green"
-    // },
-    // {
-    // 	"type": "bluetooth",
-    // 	"key": "├─",
-    // 	"keyColor": "green"
-    // },
-    // {
-    // 	"type": "sound",
-    // 	"key": "╰─",
-    // 	"keyColor": "green"
-    // },
     {
       "type": "terminal",
-      "key": "╭─",
+      "key": "term   ",
       "keyColor": "green",
-    },
-    {
-      "type": "terminalfont",
-      "key": "├─",
-      "keyColor": "green",
+      "format": "{1}",
     },
     {
       "type": "shell",
-      "key": "╰─",
+      "key": "shell  ",
       "keyColor": "green",
+      "format": "{1}",
     },
     "break",
-    // {
-    //   "type": "host",
-    //   "key": "╭─",
-    //   "keyColor": "yellow",
-    // },
     {
       "type": "cpu",
-      "key": "╭─󰍛",
+      "key": "cpu    ",
       "keyColor": "yellow",
+      "format": "{1}",
     },
     {
       "type": "gpu",
-      "key": "├─󰘚",
+      "key": "gpu    ",
       "keyColor": "yellow",
+      "format": "{1} {2}",
     },
-    {
-      "type": "display",
-      "key": "├─󰍹",
-      "keyColor": "yellow",
-    },
-    // {
-    //   "type": "wallpaper",
-    //   "key": "╰─󰸉",
-    //   "keyColor": "yellow",
-    // },
     {
       "type": "memory",
-      "key": "├─󰑭",
+      "key": "mem    ",
       "keyColor": "yellow",
     },
-    // {
-    // 	"type": "swap",
-    // 	"key": "├─󰓡",
-    // 	"keyColor": "yellow"
-    // },
     {
       "type": "disk",
-      "key": "├─",
+      "key": "disk   ",
       "keyColor": "yellow",
-      "format": "{name}: {size-used} / {size-total} ({size-percentage}) - {filesystem}",
+      "format": "{name<6}: {size-used} / {size-total} ({size-percentage}) - {filesystem}",
     },
     {
       "type": "uptime",
-      "key": "╰─󰅐",
+      "key": "uptime ",
       "keyColor": "yellow",
     },
     "break",
     {
       "type": "colors",
-      // "format": "\u001b[1m\u001b[31m  \u001b[1m\u001b[32m  \u001b[1m\u001b[33m  \u001b[1m\u001b[34m  \u001b[1m\u001b[35m  \u001b[1m\u001b[36m  \u001b[1m\u001b[37m  \u001b[1m\u001b[30m       \u001b[1m\u001b[91m  \u001b[1m\u001b[92m  \u001b[1m\u001b[93m  \u001b[1m\u001b[94m  \u001b[1m\u001b[95m  \u001b[1m\u001b[96m  \u001b[1m\u001b[97m  \u001b[1m\u001b[90m",
-      "paddingLeft": 2,
+      "paddingLeft": 3,
       "symbol": "circle",
     },
   ],
