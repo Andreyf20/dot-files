@@ -21,11 +21,13 @@ if path == "random":
     default_path = os.path.expanduser("~/Pictures/mywallpapers/")
     pictures = os.listdir(default_path)
     filtered_pictures = [x for x in pictures if re.match(r"^.*\.[^.]+$", x)]
-    random_picture = filtered_pictures[random.randrange(0, len(filtered_pictures))]
+    random_picture = filtered_pictures[random.randrange(
+        0, len(filtered_pictures))]
     path = default_path + random_picture
 
 # Example of awww usage:
-# awww img <path> --transition-type grow --transition-duration 1 --transition-fps 60
+# awww img <path> --transition-type grow
+# --transition-duration 1 --transition-fps 60
 result = call(
     [
         "awww",
