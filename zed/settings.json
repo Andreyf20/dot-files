@@ -13,28 +13,28 @@
     "tab_size": 4,
     "telemetry": {
         "diagnostics": false,
-        "metrics": false
+        "metrics": false,
     },
     "vim_mode": true,
     "colorize_brackets": true,
     "theme": {
         "mode": "system",
         "light": "Catppuccin Macchiato",
-        "dark": "Catppuccin Macchiato"
+        "dark": "Catppuccin Macchiato",
     },
     "icon_theme": {
         "mode": "system",
         "light": "Catppuccin Macchiato",
-        "dark": "Catppuccin Macchiato"
+        "dark": "Catppuccin Macchiato",
     },
     "base_keymap": "VSCode",
     "ui_font_size": 22,
     "buffer_font_size": 22.0,
     "buffer_font_features": {
         "liga": false,
-        "calt": false
+        "calt": false,
     },
     "features": {
-        "edit_prediction_provider": "supermaven"
-    }
+        "edit_prediction_provider": "supermaven",
+    },
 }
