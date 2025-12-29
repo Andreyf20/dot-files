@@ -2,8 +2,6 @@
 set -Ux EDITOR nvim
 
 # Universal variables
-set -U fish_color_command blue
-set -U fish_color_error --bold red
 
 # Exported variables
 set -x STARSHIP_CONFIG ~/.config/starship/starship.toml

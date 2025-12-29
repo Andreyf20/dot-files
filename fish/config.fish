@@ -65,6 +65,10 @@ else
 end
 # End of functions needed for !! and !$
 
+# Global variables
+set -g fish_color_command blue
+set -g fish_color_error --bold red
+
 # My abbreviations
 abbr --add n nvim .
 abbr --add nfish nvim ~/.config/fish/
