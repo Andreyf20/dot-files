@@ -1,3 +1,6 @@
+> [!Warning]
+> [Hyprland v0.53.0](https://github.com/hyprwm/Hyprland/releases/tag/v0.53.0) changed window rules. This config might not work anymore.
+
 # Hyprland
 
 ## Programs needed for the setup
