@@ -1,6 +1,6 @@
 # Font confs
-font-family = 'Fira Code'
-font-size = 22
+font-family = "FantasqueSansM Nerd Font"
+font-size = 26
 # Disable ligatures
 font-feature = -calt
 font-feature = -liga
