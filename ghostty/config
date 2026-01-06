@@ -1,6 +1,7 @@
 # Font confs
-font-family = "Fantasque Sans Mono"
+font-family = Fantasque Sans Mono
 font-size = 26
+adjust-icon-height = "-45%"
 # Disable ligatures
 font-feature = -calt
 font-feature = -liga
@@ -17,7 +18,7 @@ background-opacity = 0.90
 # background-blur-radius = 10
 
 # Keybind confs
-keybind = super+comma=reload_config
+keybind = super+shift+comma=reload_config
 keybind = ctrl+1=goto_tab:1
 keybind = ctrl+2=goto_tab:2
 keybind = ctrl+3=goto_tab:3
