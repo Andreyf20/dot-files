@@ -9,6 +9,6 @@ andrey -> username
 
 Install manually? At least for now.
 
-## Notes
+### Notes
 
 Probably need to update them at some point. So if they add new nerd glyphs, i'll have them.
