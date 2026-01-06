@@ -48,6 +48,8 @@ read confirm
 if [[ $confirm == "y" ]]; then
   chmod +x ./fish/install_fish.sh
   ./fish/install_fish.sh
+  chmod ~x ./starship/install_starship.sh
+  ./starship/install_starship.sh
   echo -e '\n'
 fi
 
