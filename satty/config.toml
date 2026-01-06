@@ -1,2 +1,4 @@
 [general]
 actions-on-enter = ["save-to-clipboard", "exit"]
+actions-on-escape = ["exit"]
+copy-command = "wl-copy"

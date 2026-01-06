@@ -21,7 +21,7 @@ binds {
     Control+Shift+Escape hotkey-overlay-title="Open Acitivity Monitor" { spawn-sh "ghostty -e btop"; }
 
     // Screenshot with grimblast and satty
-    Print hotkey-overlay-title="Screenshot with grim and edit with satty" { spawn-sh "grim -g \"$(slurp -c '##ff0000ff')\" -t ppm - | satty --filename - --copy-command 'wl-copy'"; }
+    Print hotkey-overlay-title="Screenshot with grim and edit with satty" { spawn-sh "grim -g \"$(slurp -c '##ff0000ff')\" -t ppm - | satty --filename -"; }
     Shift+Print hotkey-overlay-title="Color picker" { spawn-sh "hyprpicker | wl-copy"; }
 
     // Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
