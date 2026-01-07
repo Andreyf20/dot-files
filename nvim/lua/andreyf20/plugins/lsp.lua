@@ -114,7 +114,7 @@ return {
             vim.lsp.buf.code_action()
         end)
         vim.keymap.set("n", "<leader>vrr", function()
-            vim.rsp.buf.references()
+            vim.lsp.buf.references()
         end)
         vim.keymap.set("n", "<leader>vrn", function()
             vim.lsp.buf.rename()
