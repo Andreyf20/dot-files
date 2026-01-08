@@ -1,5 +1,6 @@
 --vim.opt.guicursor = ""
 vim.opt.signcolumn = "yes"
+vim.opt.winborder = "rounded"
 --vim.opt.colorcolumn = "80"
 
 vim.opt.nu = true
