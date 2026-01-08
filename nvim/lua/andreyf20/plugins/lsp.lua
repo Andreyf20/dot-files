@@ -119,6 +119,7 @@ return {
         vim.keymap.set("n", "<leader>vrn", function()
             vim.lsp.buf.rename()
         end)
+        vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {})
 
         -- LuaSnip config
         local ls = require("luasnip")

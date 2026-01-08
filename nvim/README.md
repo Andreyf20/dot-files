@@ -1,44 +1,26 @@
 # Guide
 
 Location for this dir should be -> /home/USER/.config/nvim
-Make sure to install **gcc g++ fd ripgrep unzip** which are needed for some plugins
 
-## Added languages
+If you want to clean the plugins `$ rm -rf ~/.local/share/nvim/`
 
-- Lua
-- Typescript, Javascript, CSS
-- Rust
-- Python
-- Go
-- C#
-- Swift (MacOS only maybe?)
+## Dependencies
 
-### LS
+- gcc
+- g++
+- fd
+- ripgrep
+- unzip
 
-- npm i -g typescript typescript-language-server
-- npm i -g vscode-langservers-extracted
-- swift sourcekit-lsp should be installed with xcode
+Some optionals: **tree-sitter tree-sitter-cli**
 
-### Treesitter
+### Extra Notes 
 
-- swift installation requires nodejs for some reason
+#### Tree-sitter
 
-### Install formatters manually
+- swift installation requires nodejs
 
-- pip install black
-- brew install swiftformat
+#### When adding new language need to change
 
-### Install formatters with Mason
+- plugins/lsp.lua <!-- Language server -->
 
-- eslint_d <!-- Javascript, Typescript -->
-- prettierd
-- goimports-reviser <!-- Golang -->
-- gofumpt
-- golines <!-- This one might be deprecated (?) -->
-- csharpier <!-- C# -->
-
-### When adding new language need to change
-
-- lsp.lua <!-- Language server -->
-- treesitter.lua <!-- Syntax highlighting -->
-- conform.lua <!-- Formatter -->
