@@ -4,19 +4,7 @@ return {
         -- Easy LSP installation
         { "mason-org/mason.nvim" },
         { "mason-org/mason-lspconfig.nvim" },
-        -- Folke LuaLS config
-        {
-            "folke/lazydev.nvim",
-            ft = "lua", -- only load on lua files
-            opts = {
-                library = {
-                    -- See the configuration section for more details
-                    -- Load luvit types when the `vim.uv` word is found
-                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                },
-            },
-        },
-        -- Suggestion engine, nvim-cmp replacement
+        { "WhoIsSethDaniel/mason-tool-installer.nvim" },
         {
             "saghen/blink.cmp",
             version = "1.*",
@@ -24,24 +12,19 @@ return {
             dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
 
             opts = {
-                -- This is already using my keybinds
-                -- C-p previous
-                -- C-n next
-                -- C-y accept
-                -- Added enter also as accept
-                keymap = { preset = "default", ["<CR>"] = { "accept", "fallback" } },
+                keymap = {
+                    preset = "default",
+                    ["<CR>"] = { "accept", "fallback" },
+                    -- Need to set c-k to fallback to be able to use it during insert mode...
+                    ["<C-k>"] = { "fallback", "show_signature", "hide_signature" },
+                },
 
                 snippets = { preset = "luasnip" },
 
                 appearance = {
-                    -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-                    -- Adjusts spacing to ensure icons are aligned
                     nerd_font_variant = "mono",
                 },
 
-                -- (Default) Only show the documentation popup when manually triggered
-                -- Disable the auto selection of suggestions and auto insert when
-                -- moving through the suggestion popup
                 completion = {
                     documentation = { auto_show = true },
                     list = { selection = { preselect = false, auto_insert = false } },
@@ -54,14 +37,10 @@ return {
                     },
                 },
 
-                -- Default list of enabled providers defined so that you can extend it
-                -- elsewhere in your config, without redefining it, due to `opts_extend`
                 sources = {
                     default = { "lsp", "path", "snippets", "buffer" },
                 },
 
-                -- If the rust fuzzy finder doesn't work use:
-                -- implementation = "lua"
                 fuzzy = { implementation = "prefer_rust_with_warning" },
 
                 -- Shows a signature help window while you type arguments for a function
@@ -72,35 +51,50 @@ return {
     },
     config = function()
         -- Easy LSP installation
-        require("mason").setup({})
-        require("mason-lspconfig").setup({
-            ensure_installed = {
-                "lua_ls",
-                -- Javascript, Typescript
-                -- "ts_ls",
-                -- "cssls",
-                -- Rust
-                -- "rust_analyzer",
-                -- Python
-                -- "pyright",
-                -- Golang
-                -- "gopls",
-                -- C#
-                -- "csharp_ls",
-            },
-        })
+        require("mason").setup()
+        require("mason-lspconfig").setup()
+        require("mason-tool-installer").setup(
+            {
+                ensure_installed = {
+                    "lua_ls",
+                    "pylsp",
+                }
+            }
+        )
 
-        -- Some LSPs require manual enabling for some reason?
-        -- local lspconfig = require("lspconfig")
-        -- lspconfig.ts_ls.setup({}) -- Enable here or won't work for single files????
-
-        -- No idea how this got disabled, but it enables back the inline err/war messages
-        vim.diagnostic.enable = true
+        -- Custom LSP servers configuration
+        -- Enable diagnostics information next to the error/warning
         vim.diagnostic.config({
             virtual_text = true,
         })
 
-        -- Custom LSP Keybinds, probably should move to keybinds?
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    runtime = {
+                        version = 'LuaJIT',
+                    },
+                    diagnostics = {
+                        globals = {
+                            'vim',
+                            'require'
+                        },
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                    telemetry = {
+                        enable = false,
+                    },
+                },
+            },
+        })
+
+        -- Enable LSP servers, manually
+        -- It should be done automatically by mason-lspconfig
+        -- vim.lsp.enable({})
+
+        -- Custom LSP Keybinds
         vim.keymap.set("n", "gd", function()
             vim.lsp.buf.definition()
         end)
@@ -110,16 +104,17 @@ return {
         vim.keymap.set("n", "<leader>vd", function()
             vim.diagnostic.open_float()
         end)
-        vim.keymap.set("n", "<leader>vca", function()
+        vim.keymap.set("n", "<leader>ca", function()
             vim.lsp.buf.code_action()
         end)
-        vim.keymap.set("n", "<leader>vrr", function()
-            vim.lsp.buf.references()
-        end)
+        -- Currently using telescope to find references
+        -- vim.keymap.set("n", "<leader>vvr", function()
+        --     vim.lsp.buf.references()
+        -- end)
         vim.keymap.set("n", "<leader>vrn", function()
             vim.lsp.buf.rename()
         end)
-        vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {})
+        vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
 
         -- LuaSnip config
         local ls = require("luasnip")
@@ -145,14 +140,25 @@ return {
             },
         })
 
-        local shared_snippets = {
+        vim.keymap.set({ "i", "s" }, "<c-k>", function()
+            if ls.expand_or_jumpable() then
+                ls.expand_or_jump()
+            end
+        end, { silent = true })
+        vim.keymap.set({"i", "s"}, "<c-j>", function() ls.jump(-1) end, {silent = true})
+
+        -- Snippets
+        local react_shared_snippets = {
             ls.parser.parse_snippet("lv", "console.log('${1}', ${2});\n${0}"),
             ls.parser.parse_snippet("dv", "<div>${1}</div>\n"),
         }
 
-        ls.add_snippets("javascript", shared_snippets)
-        ls.add_snippets("typescript", shared_snippets)
-        ls.add_snippets("javascriptreact", shared_snippets)
-        ls.add_snippets("typescriptreact", shared_snippets)
+        ls.add_snippets("javascript", react_shared_snippets)
+        ls.add_snippets("typescript", react_shared_snippets)
+        ls.add_snippets("javascriptreact", react_shared_snippets)
+        ls.add_snippets("typescriptreact", react_shared_snippets)
+
+        local go_error_snippet = ls.parser.parse_snippet("err", "if err != nil {\n\t${1}\n}\n${0}")
+        ls.add_snippets("go", { go_error_snippet })
     end,
 }
