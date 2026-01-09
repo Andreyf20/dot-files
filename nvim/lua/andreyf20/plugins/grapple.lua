@@ -7,7 +7,7 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     cmd = "Grapple",
     opts = {
-        scope = "git", -- also try out "git_branch"
+        scope = "cwd", -- also try out "git" or "git_branch"
     },
     keys = {
         { "<leader>a", "<cmd>Grapple toggle<cr>",          desc = "Tag a file" },
