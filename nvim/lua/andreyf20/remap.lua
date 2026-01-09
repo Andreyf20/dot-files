@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>w", "<cmd>w!<CR>")
+vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>")
+vim.keymap.set("n", "<leader>qb", "<cmd>bd!<CR>")
+vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-N>")
 
 -- Do not care about case when searching
 vim.keymap.set("n", "/", "/\\c")
