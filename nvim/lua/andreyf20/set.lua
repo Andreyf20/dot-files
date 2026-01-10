@@ -10,7 +10,8 @@ vim.opt.tabstop = 4        -- Equivalent number of spaces a <Tab> in the file co
 vim.opt.softtabstop = 4    -- Spaces added when pressing <Tab>
 vim.opt.shiftwidth = 4     -- Amount of spaces to use for indentation
 vim.opt.expandtab = true   -- Insert spaces when <Tab> is pressed
-vim.opt.smartindent = true -- Auto indent when starting a new line
+vim.opt.autoindent = true  -- Auto indent when starting a new line
+vim.opt.smartindent = true -- Try to indent properly when adding a new line
 
 vim.opt.wrap = false
 
@@ -22,6 +23,8 @@ vim.opt.undofile = true
 -- If true set this remap to stop highlighting vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 

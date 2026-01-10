@@ -5,9 +5,6 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>")
 vim.keymap.set("n", "<leader>qb", "<cmd>bd!<CR>")
 vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-N>")
 
--- Do not care about case when searching
-vim.keymap.set("n", "/", "/\\c")
-
 -- Move lines up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
