@@ -76,6 +76,7 @@ abbr --add nconfig nvim ~/.config/nvim/
 abbr --add n.config nvim ~/.config/
 abbr --add lg lazygit
 abbr --add tx tmux -u
+abbr --add cpcfg cp -r ~/.config/ ~/Documents/GIT_ROOT/dot-files/
 
 # My aliases
 alias ls="eza -l --sort type --icons"
@@ -83,6 +84,7 @@ alias cd="z"
 alias cat="bat"
 alias ff="clear && fastfetch"
 alias change_wallpaper="~/.config/personal_scripts/change_wallpaper.py"
+alias check_ping="~/.config/personal_scripts/check_ping.py"
 alias emacs="doom emacs"
 
 # Inits
