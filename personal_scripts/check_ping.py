@@ -52,12 +52,19 @@ try:
                       "-c",
                       "1"],
                      stdout=PIPE)
-        split_result = result.stdout.decode('UTF-8').split()
-        split_result = split_result[-2]  # min/avg/max/mdev
-        split_result = split_result.split("/")[2]  # max_ms
-        print(f"Ping result: {split_result}")
+        result = result.stdout.decode('UTF-8')
+        result_split = result.split()
+        ping_data = result_split[-2]  # min/avg/max/mdev
+        ping_data = ping_data.split("/")
+        if len(ping_data) < 4:
+            print(f"Error parsing the result: {result}")
+            continue
 
-        max_value = float(split_result)
+        max_value = ping_data[2]  # max
+
+        print(f"Ping result: {max_value}")
+
+        max_value = float(max_value)
 
         sleep_amount = 5
 
