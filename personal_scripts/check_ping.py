@@ -75,6 +75,14 @@ try:
                 values.clear()
             previous_borked = False
 
+        # Failsafe in case ping never goes back down
+        # so i don't grow values indefinitely
+        if len(values) > 99:
+            end_time = datetime.now()
+            create_log(start_time, end_time, values)
+            values.clear()
+            previous_borked = False
+
         sleep(sleep_amount)
 
 except KeyboardInterrupt:
