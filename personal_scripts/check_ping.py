@@ -9,10 +9,27 @@ from time import sleep
 from sys import argv
 import os
 
-ip_address = argv[1] if len(argv) > 1 else "8.8.8.8"
-max_acceptable_ms = argv[2] if len(argv) > 2 else 80.0
+
+def get_arguments(argv: List[str], arg_name: str, default_arg: str) -> str:
+    index = argv.index(arg_name) if arg_name in argv else -1
+    if index > -1:
+        try:
+            return argv[index + 1]
+        except IndexError:
+            return default_arg
+    return default_arg
+
+
+ip_address = get_arguments(argv, "-ip", "8.8.8.8")
+max_acceptable_ms = float(get_arguments(argv, "-maxms", "80.0"))
+sleep_seconds = int(get_arguments(argv, "-sleep", 5))
+sleep_seconds = max(sleep_seconds, 1)
+sleep_offset = int(get_arguments(argv, "-offset", 15))
+sleep_offset = min(sleep_offset, 15)
 print(f"Pinging address: {ip_address}")
 print(f"Max acceptable ms: {max_acceptable_ms}")
+print(f"Ping Interval: {sleep_seconds} second(s)")
+print(f"Offset when lagging: {sleep_offset} second(s)")
 
 
 def create_log(start_time: datetime,
@@ -66,7 +83,7 @@ try:
 
         max_value = float(max_value)
 
-        sleep_amount = 5
+        sleep_amount = sleep_seconds
 
         if max_value > max_acceptable_ms:
             if previous_borked is False:
@@ -74,7 +91,7 @@ try:
                 notify_desktop("PING EXCEEDED!!!!")
             previous_borked = True
             values.append(max_value)
-            sleep_amount = 15
+            sleep_amount = sleep_offset
         else:
             if previous_borked:
                 end_time = datetime.now()
