@@ -13,3 +13,6 @@ fish_variables
 fish/functions/
 fish/completions/
 fish/conf.d/
+
+# Personal scripts logs
+personal_scripts/check_ping_logs
