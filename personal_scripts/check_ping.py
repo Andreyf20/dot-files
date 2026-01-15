@@ -52,16 +52,27 @@ def create_log(start_time: datetime,
         log.write(f"Mean: {values_mean}\n")
 
 
-def notify_desktop(message: str) -> None:
+def send_notification(message: str) -> bool:
     run(["notify-send", "-r", "5", "-p", message],
         stdout=DEVNULL,
         stderr=DEVNULL)
+    return True
+
+
+def notify_desktop(message: str, previous_notification_time: datetime) -> bool:
+    if previous_notification_time is None:
+        return send_notification(message)
+    time_diff = datetime.now() - previous_notification_time
+    if time_diff.total_seconds() > (4 * 60):  # 4 minutes
+        return send_notification(message)
+    return False
 
 
 try:
     start_time = None
     end_time = None
     previous_borked = False
+    previous_notification_time = None
     values = []
     while True:
         result = run(["ping",
@@ -69,12 +80,16 @@ try:
                       "-c",
                       "1"],
                      stdout=PIPE)
-        result = result.stdout.decode('UTF-8')
-        result_split = result.split()
-        ping_data = result_split[-2]  # min/avg/max/mdev
-        ping_data = ping_data.split("/")
-        if len(ping_data) < 4:
-            print(f"Error parsing the result: {result}")
+        try:
+            result = result.stdout.decode('UTF-8')
+            result_split = result.split()
+            ping_data = result_split[-2]  # min/avg/max/mdev
+            ping_data = ping_data.split("/")
+            if len(ping_data) < 4:
+                print(f"Error parsing the result: {result}")
+                continue
+        except:
+            sleep(sleep_offset)
             continue
 
         max_value = ping_data[2]  # max
@@ -88,7 +103,10 @@ try:
         if max_value > max_acceptable_ms:
             if previous_borked is False:
                 start_time = datetime.now()
-                notify_desktop("PING EXCEEDED!!!!")
+                sent = notify_desktop(
+                    "PING EXCEEDED!!!!", previous_notification_time)
+                if sent:
+                    previous_notification_time = datetime.now()
             previous_borked = True
             values.append(max_value)
             sleep_amount = sleep_offset
