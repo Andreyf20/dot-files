@@ -14,20 +14,21 @@ binds {
     Super+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Super+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Super+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Super+E hotkey-overlay-title="Open a File Manager: nautilus" { spawn "nautilus"; }
-    Super+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-browser"; }
-    Control+Shift+Escape hotkey-overlay-title="Open Acitivity Monitor" { spawn-sh "ghostty -e btop"; }
+    // Super+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-browser"; }
+    Super+B hotkey-overlay-title="Open Browser: helium" { spawn "helium-browser"; }
+    Control+Shift+Escape hotkey-overlay-title="Open Acitivity Monitor" { spawn-sh "kitty -e btop"; }
 
     // Screenshot with grimblast and satty
     Print hotkey-overlay-title="Screenshot with grim and edit with satty" { spawn-sh "grim -g \"$(slurp -c '##ff0000ff')\" -t ppm - | satty --filename -"; }
     Shift+Print hotkey-overlay-title="Color picker" { spawn-sh "hyprpicker | wl-copy"; }
 
-    // Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     // Pause { spawn-sh "dms ipc call audio micmute"; }
     // Shift+Pause { spawn-sh "dms ipc call audio mute"; }
-    Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    // Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
     Shift+Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.

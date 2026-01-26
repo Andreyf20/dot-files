@@ -6,6 +6,10 @@ spawn-at-startup "awww-daemon"
 // spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "qs" "-c" "noctalia-shell"
+// spawn-at-startup "vibepanel"
+// Programs
+spawn-at-startup "steam"
+spawn-sh-at-startup "sleep 1 && vesktop"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
