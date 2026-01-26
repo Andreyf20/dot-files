@@ -19,10 +19,17 @@ $rust\
 $scala\
 $conda\
 $python\n \
-[󱞪](fg:iris) \
+$character\
 """
+# [󱞪](fg:iris) \
 
 palette = "rose-pine-moon"
+
+# Starship modules
+[character]
+success_symbol = "[󱞪](fg:iris)"
+error_symbol = "[󱞪](fg:love)"
+vimcmd_symbol = "[󱞪](fg:iris)"        # For use with zsh-vi-mode
 
 [palettes.rose-pine-moon]
 overlay = '#393552'
