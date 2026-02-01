@@ -22,14 +22,19 @@ binds {
     Control+Shift+Escape hotkey-overlay-title="Open Acitivity Monitor" { spawn-sh "kitty -e btop"; }
 
     // Screenshot with grimblast and satty
-    Print hotkey-overlay-title="Screenshot with grim and edit with satty" { spawn-sh "grim -g \"$(slurp -c '##ff0000ff')\" -t ppm - | satty --filename -"; }
-    Shift+Print hotkey-overlay-title="Color picker" { spawn-sh "hyprpicker | wl-copy"; }
+    // Print hotkey-overlay-title="Screenshot with grim and edit with satty" { spawn-sh "grim -g \"$(slurp -c '##ff0000ff')\" -t ppm - | satty --filename -"; }
+    // Shift+Print hotkey-overlay-title="Color picker" { spawn-sh "hyprpicker | wl-copy"; }
+    // Keybinds for nuphy air75 keyboard:
+    Super+Shift+S hotkey-overlay-title="Screenshot with grim and edit with satty" { spawn-sh "grim -g \"$(slurp -c '##ff0000ff')\" -t ppm - | satty --filename -"; }
+    Super+Shift+Alt+S hotkey-overlay-title="Color picker" { spawn-sh "hyprpicker | wl-copy"; }
 
-    Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    // Pause { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     // Pause { spawn-sh "dms ipc call audio micmute"; }
     // Shift+Pause { spawn-sh "dms ipc call audio mute"; }
     // Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
-    Shift+Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    // Shift+Pause { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    // Keybinds for nuphy air75 keyboard:
+    Insert { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
