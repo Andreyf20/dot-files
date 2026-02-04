@@ -31,6 +31,7 @@ return {
                 ["g\\"] = { "actions.toggle_trash", mode = "n" },
             },
             use_default_keymaps = false,
+            delete_to_trash = true,
         })
         vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
