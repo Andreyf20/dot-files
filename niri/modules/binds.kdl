@@ -18,7 +18,8 @@ binds {
     Super+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Super+E hotkey-overlay-title="Open a File Manager: nautilus" { spawn "nautilus"; }
     // Super+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-browser"; }
-    Super+B hotkey-overlay-title="Open Browser: helium" { spawn "helium-browser"; }
+    // Super+B hotkey-overlay-title="Open Browser: helium" { spawn "helium-browser"; }
+    Super+B hotkey-overlay-title="Open Browser: floorp" { spawn "floorp"; }
     Control+Shift+Escape hotkey-overlay-title="Open Acitivity Monitor" { spawn-sh "kitty -e btop"; }
 
     // Screenshot with grimblast and satty
